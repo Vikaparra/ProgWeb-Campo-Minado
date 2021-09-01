@@ -1,24 +1,12 @@
-.colors{
+:root{
     --white: #FAF5F1;
     --brown: #2D170E;
     --sand: #CC983D;
-    --red: #A30000;
+    --velet: #A30000;
     --blue: #29BAEC;
 
-}
-
-@font-face{
-    font-family: 'pixelart';
-    src: url('pixelart.ttf') format('truetype');
-    font-weight: normal;      
-    font-style: normal;  
-}
-
-.header1{
-    font-family: 'pixelart';
-    font-size: 200px;
-}
-
-.cor{
-    background-color: #29BAEC;
+    --header1: 64px;
+    --header2: 48px;
+    --body: 18px;
+    --forms: 12px;
 }
