@@ -1,0 +1,80 @@
+@import url(../../shared/assets/shared.css);
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 100vh;
+    background-image: url(../../shared/imgs/praias/praia_azul_ensolarada.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.side-menu{
+    /* margin: 2rem; */
+    display: flex;
+    height: 38rem;
+    flex-direction: column;
+    padding: 30px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px 30px 0px 30px;
+    border: 8px solid var(--sand);
+}
+
+.div-buttons{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.pirate-name{
+    text-align: center;
+    color: white;
+}
+
+.general-button{
+    margin-bottom: 2em;
+    height: 5em;
+}
+
+.pirata-img{
+    border-radius: 50%;
+    height: 12em;
+    border: 0.5em solid var(--sand);
+}
+
+.button-jogar{
+    background-color: var(--velvet);
+    padding: 40px 70px;
+    font-size: var(--header1);
+    color: white;
+}
+
+h3{
+    font-size: var(--header1);
+    color: white;
+    margin-bottom: 0.7em;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+}
+
+span img{
+    height: 2em;
+    margin-right: 1em;
+}
+
+.button-vermelho{
+    color: var(--velvet);
+}

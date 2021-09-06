@@ -3,6 +3,10 @@
     src: url(../fonts/pixelart.ttf);
 }
 
+body{
+    margin: 0;
+}
+
 *{
     font-family: 'Pixel-Art Regular';
 
