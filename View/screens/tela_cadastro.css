@@ -3,108 +3,57 @@
 @import url(./button.css);
 
 .background{
-    background-image: url(../Shared/imgs/BG/CampoMinadoPrincipalSemLogo.png); 
-    background-repeat: no-repeat;
-    background-size: 1380px 625px;
+  background-image: url(../Shared/imgs/BG/CampoMinadoPrincipalSemLogo.png); 
+  background-repeat: no-repeat;
+  background-size: 1380px 625px;
 }
 
 .box{
-    position: absolute;
-    width: 521px;
-    height: 520px;
-    left:440px;
-    top: 50px;
-
-    background-color:saddlebrown;
-
-    border: 10px solid #CC983D;
-    box-sizing: border-box;
+  width: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80%;
+  top: 20%;
+  background-color:saddlebrown;
+  border: 10px solid #CC983D;
+  box-sizing: border-box;
 }
 
-.space{
-    position: absolute;
-    width: 400px;
-    height: 30px;
-    left: 400px;
-    top: 100px;
-
-    background: #2D170E;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 11px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 2%;
 }
 
-#area
-{
-  position:absolute;
-  left:400px;
-  top:50px;
-  width:620px;
-  height:520px;
-}
-#area #formulario
-{
-  position:absolute;
-  display:block;
-}
-fieldset
-{
-  width:590px;
-  height:490px;
-  border-style: hidden;
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-#formulario label
-{
-  position:absolute;
-  left:50px;
-  margin-right:5px;
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top:1%;
 }
 
-#formulario input.campo_nome
-{
-  position:absolute;
-  left:370px;
-  top:50px;
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
 }
-#formulario input.campo_datanasc
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
+
+.flex-inner li {
+  width: 100px;
 }
-#formulario input.campo_cpf
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
-}
-#formulario input.campo_telefone
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
-}
-#formulario input.campo_email
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
-}
-#formulario input.campo_username
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
-}
-#formulario input.campo_senha
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
-}
-#formulario input.campo_confsenha
-{
-  position:absolute;
-  left:370px;
-  margin-top:2px;
+
+.item{
+  flex:1;
+  width: 80%;
+  background-color: #2D170E;
+  border-style: hidden; 
+  height:30px; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
+    inset 0px 4px 11px 3px rgba(0, 0, 0, 0.25); 
+  border-radius: 4px; color:#FAF5F1;
 }
