@@ -1,7 +1,7 @@
 @import url(./shared.css);
 
 .general-button{
-    width: 15%;
+    width: 15rem;
     color: var(--sand);
     padding: 1.5% 10px;
     border: 6px solid var(--sand);
