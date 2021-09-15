@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../../shared/imgs/praias/principal_logo.png);
+    background-image: url(../../shared/imgs/BG/principal_logo.png);
     background-size: cover;
 }
 

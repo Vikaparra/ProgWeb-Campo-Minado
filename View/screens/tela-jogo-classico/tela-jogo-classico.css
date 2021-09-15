@@ -60,12 +60,12 @@ section{
 }
 
 #text-final button:last-child{
-    color: var(--velet);
+    color: var(--velvet);
 }
 
 .general-button{
     margin-bottom: 2em;
-    height: 4em;
+    height: 5em;
 }
 
 aside{
@@ -80,8 +80,8 @@ aside > p{
 }
 
 aside > button:last-child{
-    background-color: var(--velet);
-    height: 3em;
+    background-color: var(--velvet);
+    height: 4em;
 }
 
 #time{

@@ -1,11 +1,15 @@
-@import url(./shared.css);
-@import url(./normalize.css);
-@import url(./button.css);
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/normalize.css);
+@import url(../../shared/assets/button.css);
 
 .background{
-  background-image: url(../Shared/imgs/BG/CampoMinadoPrincipalSemLogo.png); 
+  background-image: url(../../shared/imgs/BG/principal_sem_logo.png); 
   background-repeat: no-repeat;
-  background-size: 1380px 625px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .box{
