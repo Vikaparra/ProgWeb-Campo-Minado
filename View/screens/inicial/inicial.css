@@ -1,5 +1,5 @@
-@import url(../../Shared/assets/shared.css);
-@import url(../../Shared/assets/button.css);
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/button.css);
 
 body{
     display: flex;
