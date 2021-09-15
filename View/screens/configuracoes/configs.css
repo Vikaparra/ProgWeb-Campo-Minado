@@ -1,0 +1,83 @@
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/button.css);
+
+body {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    background-image: url(../../shared/imgs/praias/principal_sem_logo.png);
+    background-size : cover;
+}
+
+.container {
+    width          : 100vw;
+    height         : 100vh;
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+}
+
+.box {
+    min-width     : 27rem;
+    min-height    : 32rem;
+    padding   : 2rem 0.5rem 2rem 0.5rem;
+    display   : flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border    : 5px solid var(--sand);
+    box-sizing: border-box;
+    position  : relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* text-align: center;
+    justify-content: space-between;
+     */
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--white);
+    font-size: 25px;
+}
+
+select{
+    margin: 0.3em 0 1.5em 0;
+    border-radius: 5px;
+    width: 40%;
+    height: 2em;
+}
+
+.slidecontainer{
+    margin: 0.3em 0 1.5em 0;    
+}
+
+.slider{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 15em;
+}
+
+.rangevalue {
+    margin-left: 0.3em;
+    text-align: center;
+    vertical-align: top;
+    color: var(--white);
+}
+
+
+.general-button {
+    padding : 1.2rem 15px;
+    width   : 50%;
+    background-color: var(--velet);
+    margin-bottom: 1em;
+    font-size: 23px;
+}
+
+a{
+    color: unset;
+}

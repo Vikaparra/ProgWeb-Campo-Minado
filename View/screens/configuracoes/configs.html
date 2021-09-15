@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/assets/normalize.css">
+    <link rel="stylesheet" href="../../shared/assets/button.css">
+    <link rel="stylesheet" href="configs.css">
+    <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <title>Início</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box column">
+
+            <p>modo de jogo:</p>
+            <select>
+                <option> </option>
+                <option>classico</option>
+                <option>rivotril</option>
+            </select>
+            <p>tamanho da grade:</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" onchange="gridvalue.value=value">
+                <output class="rangevalue" id="gridvalue">50</output>  
+            </div>
+            <p>numero de bombas:</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" onchange="bombvalue.value=value">
+                <output class="rangevalue" id="bombvalue">50</output> 
+              </div>
+
+            <button class="general-button" type="submit">
+                jogar!
+            </button>
+
+            <p>tempo: 00:00</p>
+        </div>
+        <a href="/View/screens/inicial/inicial.html">
+            .
+        </a>
+    </div>
+
+</body>
+
+</html>
