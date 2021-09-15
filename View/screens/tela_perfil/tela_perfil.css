@@ -1,0 +1,59 @@
+@import url(./shared.css);
+@import url(./normalize.css);
+@import url(./button.css);
+
+.background{
+  background-image: url(../Shared/imgs/BG/CampoMinadoPrincipalSemLogo.png); 
+  background-repeat: no-repeat;
+  background-size: 1380px 625px;
+}
+
+.box{
+  width: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80%;
+  top: 20%;
+  background-color:saddlebrown;
+  border: 10px solid #CC983D;
+  box-sizing: border-box;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 2%;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top:1%;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+.flex-inner li {
+  width: 100px;
+}
+
+.item{
+  flex:1;
+  width: 80%;
+  background-color: #2D170E;
+  border-style: hidden; 
+  height:30px; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 
+    inset 0px 4px 11px 3px rgba(0, 0, 0, 0.25); 
+  border-radius: 4px; color:#FAF5F1;
+}

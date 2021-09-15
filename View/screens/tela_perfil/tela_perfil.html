@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../shared/assets/normalize.css">
+    <link rel="stylesheet" href="../shared/assets/button.css">
+    <link rel="shortcut icon" href="../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/6d7b072ee1.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="tela_perfil.css">
+    <title>Seu perfil!</title>
+</head>
+
+<body class="background">
+    <h2 class="shared" style="text-align: center; margin-top:10px;">seu perfil</h2>
+
+    <div class="box">
+        <form>
+            <ul class="flex-outer">
+                <li>
+                    <label for="campo_nome">Nome Completo:</label>
+                </li>
+                <li>
+                    <input type="text" class="item" placeholder="nome completo">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>    
+                </li>
+                <li>
+                    <label for="campo_datanasc">Data de Nascimento:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+                    <label for="campo_cpf">CPF:</label>
+                </li>
+                <li>
+                    <input type="date" class="item">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>&emsp;
+                    <input type="number" class="item" placeholder="x x x x x x x x x x x" readonly>
+                    <span style="visibility: hidden; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+                <li>
+                    <label for="campo_telefone">Telefone com DDD:</label>
+                </li>
+                <li>
+                    <input type="tel" class="item" placeholder="(x x) x x x x x - x x x x">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+                <li>
+                    <label for="campo_email">E-mail:</label>
+                </li>
+                <li>
+                    <input type="email" class="item" placeholder="exemplo@gmail.com">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+                <li>
+                    <label for="campo_username">Username:</label>
+                </li>
+                <li>
+                    <input type="text" class="item" placeholder="username" readonly>
+                    <span style="visibility: hidden; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+                <li>
+                    <label for="campo_senha">Senha:</label>
+                </li>
+                <li>
+                    <input type="password" class="item" placeholder="******">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+                <li>
+                    <label for="campo_confsenha">Confirme a Senha:</label>
+                </li>
+                <li>
+                    <input type="password" class="item" placeholder="******">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div style="margin-top: 1em; margin-left: 15px; margin-right: 15px;">
+        <button class="general-button" type="button">
+            voltar
+        </button>
+        <button class="general-button" type="submit" style="float: right;">
+            continuar
+        </button>
+    </div>  
+    
+</body>
+</html>
