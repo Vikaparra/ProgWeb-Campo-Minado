@@ -10,12 +10,13 @@ body {
 }
 
 .div-buttons {
-    margin-top : 22rem;
+    margin-top : 24rem;
     align-items: center;
-    display    : block;
+    display    : flex;
+    flex-direction: column;
 }
 
 .general-button {
-    padding: 1rem 15px;
+    padding: 1.8rem 15px;
     margin : 0.4rem;
 }
