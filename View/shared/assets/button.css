@@ -3,6 +3,7 @@
 
 .general-button{
     width: 18rem;
+    min-height: 5rem;
     color: var(--sand);
     padding: 1.5% 10px;
     border: 0.7rem solid var(--sand);

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../shared/assets/button.css">
     <link rel="stylesheet" href="configs.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
-    <title>Início</title>
+    <title>Modo de Jogo</title>
 </head>
 
 <body>
@@ -31,19 +31,23 @@
             <div class="slidecontainer">
                 <input type="range" min="1" max="99" value="50" class="slider" id="myRange" onchange="bombvalue.value=value">
                 <output class="rangevalue" id="bombvalue">50</output>
-              </div>
-
-            <button class="general-button" type="submit">
-                jogar!
-            </button>
-
+            </div>
+            <div>
+                <a href="/View/screens/tela-jogo-classico/tela-jogo-classico.html">  
+                    <button class="general-button general-button-play" type="submit">
+                        jogar!
+                    </button>
+                </a>
+            </div>
             <p>tempo: 00:00</p>
-        </div>
-        <a href="/View/screens/inicial/inicial.html">
-            .
-        </a>
-    </div>
 
+                <a href="/View/screens/tela_menu_principal/tela_menu_principal.html">
+                   <div class="div-button-voltar">
+                       <img id="retornar" src="../../Shared/imgs/icones/return3.png" alt="Icone de retornar para pagina anterior">
+                   </div>
+                </a>
+        </div>
+    </div>
 </body>
 
 </html>

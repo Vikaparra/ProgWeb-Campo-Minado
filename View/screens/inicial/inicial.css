@@ -1,34 +1,21 @@
 @import url(../../shared/assets/shared.css);
 @import url(../../shared/assets/button.css);
 
-body{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
     background-image: url(../../shared/imgs/BG/principal_logo.png);
-    background-size: cover;
+    background-size : cover;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.div-buttons {
+    margin-top : 22rem;
     align-items: center;
-    }
-
-.div-buttons{
-    margin-top: 22rem;
-    align-items: center;
-    display:block; 
+    display    : block;
 }
 
-.general-button{
+.general-button {
     padding: 1rem 15px;
-    margin: 0.4rem;
-}
-
-a{
-    color: unset;
+    margin : 0.4rem;
 }

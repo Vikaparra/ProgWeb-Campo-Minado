@@ -9,43 +9,28 @@ body {
     background-size : cover;
 }
 
-.container {
-    width          : 100vw;
-    height         : 100vh;
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    align-items    : center;
-}
-
 .box {
-    width     : 28rem;
-    height    : 28rem;
-    padding   : 1rem;
-    display   : flex;
-    flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border    : 5px solid var(--sand);
-    box-sizing: border-box;
-    position  : relative;
-    justify-content: center;
-    
-}
-.teste{
-    display: flex;
-    justify-content: center;
-    /* margin: 0 auto 0 auto ; */
-    margin-bottom: 20px;
+    width              : 28rem;
+    height             : 28rem;
+    padding            : 1rem;
+    display            : flex;
+    flex-direction     : column;
+    background         : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    background-position: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    border             : 5px solid var(--sand);
+    box-sizing         : border-box;
+    position           : relative;
+    justify-content    : center;
+
 }
 
-/* .column {
-    flex-direction : column;
-     justify-content: center; 
-} 
-*/
+.teste {
+    display        : flex;
+    justify-content: center;
+    margin-bottom  : 20px;
+}
 
 .flex li {
     height          : 2.5em;
@@ -59,12 +44,11 @@ body {
     display         : flex;
     flex-wrap       : wrap;
     align-items     : center;
-    margin-bottom: 1.5em;
+    margin-bottom   : 1.5em;
 }
 
-li:last-child
-{
-  margin-bottom: 0.7em;
+li:last-child {
+    margin-bottom: 0.7em;
 }
 
 input {
@@ -74,19 +58,19 @@ input {
     border          : unset;
     color           : unset;
     background-color: unset;
-    padding-left: 5px;
+    padding-left    : 5px;
 }
 
 input::placeholder {
     text-align    : center;
-    font-size: 18px;
+    font-size     : 18px;
     vertical-align: middle;
     color         : var(--white);
 }
 
-input:focus, 
-textarea:focus, 
-select:focus{
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
 
@@ -98,32 +82,49 @@ select:-webkit-autofill {
     box-shadow             : 0 0 0px 1000px #1f0f09 inset;
 }
 
-.general-button {
-    /* padding : 1rem 10px; */
-    /* width   : 50%; */
-    /* position: absolute; */
-    /* bottom  : -7%; */
-    /* left    : 22%; */
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    height: 4em;
-    margin-top: 6em;
-    
-}
-
-a {
-    color: unset;
-}
-
-.img-pirata{
+.img-pirata {
     border-radius: 50%;
-    border: 0.3em solid var(--sand);
+    border       : 0.3em solid var(--sand);
 }
 
-.div-button{
-    display: flex;
-    align-items: center;
+.div-button {
+    position    : absolute;
+    width       : intrinsic;
+    /* Safari/WebKit uses a non-standard name */
+    width       : -moz-max-content;
+    /* Firefox/Gecko */
+    width       : -webkit-max-content;
+    /* Chrome */
+    margin-left : auto;
+    margin-right: auto;
+    left        : 0;
+    right       : 0;
+    margin-top  : 27em;
 }
+
+.div-button-voltar {
+    position    : absolute;
+    width       : intrinsic;
+    /* Safari/WebKit uses a non-standard name */
+    width       : -moz-max-content;
+    /* Firefox/Gecko */
+    width       : -webkit-max-content;
+    /* Chrome */
+    margin-left : auto;
+    margin-right: auto;
+    left        : 21em;
+    right       : 0;
+    margin-top  : -28em;
+}
+
+.botoes {
+    width          : 100vw;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.general-button-menu {
+    margin    : 0 4rem 0 4rem;
+    min-height: 4rem;
+    width: 4rem;
+} 
