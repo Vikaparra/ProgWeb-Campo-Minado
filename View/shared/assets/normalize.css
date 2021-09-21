@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Pixel-Art Regular';
-    src: url(../fonts/pixelart.ttf);
+    src: url(../fonts/pixelart.ttf) format('ttf'), 
+    url(../fonts/pixelart.woff) format('woff');
 }
 
 *{
