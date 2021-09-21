@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @import url(./shared.css);
 
 .general-button{
@@ -17,4 +18,25 @@ Exemplo de button
 <button class="general-button" type="submit">
         voltar
     </button>
+=======
+@import url(./shared.css);
+
+.general-button{
+    width: 15%;
+    color: var(--sand);
+    padding: 1.5% 10px;
+    border: 6px solid var(--sand);
+    background-color: var(--brown);
+    border-radius: 10px;
+    font-size: var(--body);
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 20px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* 
+Exemplo de button 
+<button class="general-button" type="submit">
+        voltar
+    </button>
+>>>>>>> Stashed changes
 */
