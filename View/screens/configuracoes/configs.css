@@ -33,9 +33,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* text-align: center;
-    justify-content: space-between;
-     */
 }
 
 p{
@@ -50,10 +47,27 @@ select{
     border-radius: 5px;
     width: 40%;
     height: 2em;
+    text-align: center;
+    font-size: var(--body);
+
+}
+
+.inputcontainer{
+    height: 2em;
+    width: 5rem;
+    padding-left: 12px;
+    text-align: center;
+    font-size: var(--body);
 }
 
 .slidecontainer{
-    margin: 0.3em 0 1.5em 0;    
+    margin: 0.3em 0 1.5em 0;
+    text-align: center;
+    display: flex;
+}
+
+#gridtext{
+    margin: auto 0.5em auto 0.5em;
 }
 
 .slider{
@@ -64,11 +78,8 @@ select{
 
 .rangevalue {
     margin-left: 0.3em;
-    text-align: center;
-    vertical-align: top;
     color: var(--white);
 }
-
 
 .general-button {
     padding : 1.2rem 15px;
