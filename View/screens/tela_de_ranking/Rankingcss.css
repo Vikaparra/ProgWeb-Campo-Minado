@@ -1,76 +1,51 @@
-body{
-    background-image: url(principal_sem_logo.png);
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/normalize.css);
+@import url(../../shared/assets/button.css);
+
+.background{
+    background-image: url(../../shared/imgs/BG/principal_sem_logo.png); 
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
-img{
-    width: 200px;
-    height: 200px;
+.container {    
+    width: 100vw;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
-    position: absolute;
-    width: 247px;
-    height: 42px;
-    left: 550px;
-    top: 200px;
-    font-family: Pixel-Art;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 42px;
-    letter-spacing: -0.02em;
-    color: #2D170E;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#ranking{
-    position: absolute;
-    width: 626px;
-    height: 433px;
-    left: 350px;
-    top: 320px;
+.box{
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80%;
+    top: 20%;
+    background-color:saddlebrown;
     border: 10px solid #CC983D;
     box-sizing: border-box;
-    font-family: 'Pixel-Art Regular';
 }
 
-#voltar{
-    position: absolute;
-    width: 260px;
-    height: 90.47px;
-    left: 10px;
-    top: 780px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 10px solid #CC983D;
-    background-color: #381917;
-    color: #CC983D;
-    border-radius: 20px;
-    font-size: 25px;
-    font-family: 'Pixel-Art Regular';
+.tabranking{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    vertical-align: middle;
+    padding: 1vw;
+    border-spacing: 0 8px;
+    border-collapse: separate;
+    margin-top: -8px;
 }
 
-#continuar{
-    position: absolute;
-    width: 260px;
-    height: 90.47px;
-    top: 780px;
-    left: 1040px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 10px solid #CC983D;
-    background-color: #381917;
-    color: #CC983D;
-    border-radius: 20px;
-    font-size: 25px;
-    font-family: 'Pixel-Art Regular';
+tr:nth-child(even) {
+    background-color: #cc983d9a;
 }
 
-button:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.5ms;
+tr.spaceUnder>td {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
 }
