@@ -50,11 +50,24 @@ body {
     flex-wrap      : wrap;
 }
 
+.container-imagens div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    
+}
+
+.container-imagens div h2{
+    font-size: var(--body);
+}
+
 .imagens {
     height          : 10em;
     background-color: var(--white);
     border-radius   : 100px;
     margin          : 0.5em 1em 0.5em 1em;
+    border: solid 8px var(--sand);
 }
 
 .botoes {
