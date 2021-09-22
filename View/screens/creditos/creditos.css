@@ -1,0 +1,82 @@
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/button.css);
+
+body {
+    display                : flex;
+    justify-content        : space-between;
+    align-items            : center;
+    background-image       : url(../../shared/imgs/BG/principal_sem_logo.png);
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    background-repeat      : no-repeat;
+}
+
+.container {
+    width          : 100vw;
+    height         : 100vh;
+    /* padding     : 0.5rem 0; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+.box {
+    min-width          : 40rem;
+    min-height         : 20rem;
+    padding            : 2rem;
+    display            : flex;
+    flex-direction     : column;
+    background         : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    background-position: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    border             : 5px solid var(--sand);
+    box-sizing         : border-box;
+    position           : relative;
+    justify-content    : center;
+    align-items        : center;
+}
+
+#titulo {
+    font-size: var(--header2);
+}
+
+.container-imagens {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+.container-imagens div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    
+}
+
+.container-imagens div h2{
+    font-size: var(--body);
+}
+
+.imagens {
+    height          : 10em;
+    background-color: var(--white);
+    border-radius   : 100px;
+    margin          : 0.5em 1em 0.5em 1em;
+    border: solid 8px var(--sand);
+}
+
+.botoes {
+    width          : 100vw;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.general-button {
+    margin    : 0 4rem 0 4rem;
+    min-height: 5rem;
+}
