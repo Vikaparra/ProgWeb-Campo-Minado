@@ -11,14 +11,6 @@
     background-size: cover;
 }
 
-.container {    
-    width: 100vw;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-}
-
 .box{
     width: 50%;
     max-width: 1200px;
@@ -48,4 +40,9 @@ tr:nth-child(even) {
 tr.spaceUnder>td {
     padding-bottom: 0.3em;
     padding-top: 0.3em;
+}
+
+.div-img{
+    display: flex;
+    justify-content: center;
 }
