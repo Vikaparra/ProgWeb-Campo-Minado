@@ -25,7 +25,7 @@ body {
 }
 
 .box {
-    max-width          : 80rem;
+    max-width          : 70rem;
     padding            : 1.5rem;
     display            : flex;
     box-sizing         : border-box;
