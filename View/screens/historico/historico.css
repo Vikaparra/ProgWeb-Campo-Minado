@@ -1,10 +1,56 @@
 @import url(../../shared/assets/shared.css);
 @import url(../../shared/assets/normalize.css);
 
-body{
-    background-image: url(../../shared/imgs/BG/principal_sem_logo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+body {
+    display                : flex;
+    justify-content        : space-between;
+    align-items            : center;
+    background-image       : url(../../shared/imgs/BG/principal_sem_logo.png);
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    background-repeat      : no-repeat;
+}
+
+.container {
+    width          : 100vw;
+    height         : 100vh;
+    /* padding     : 0.5rem 0; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+.box {
+    max-width          : 80rem;
+    padding            : 1.5rem;
+    display            : flex;
+    box-sizing         : border-box;
+    position           : relative;
+    justify-content    : center;
+    background-color: saddlebrown;
+    border: solid 8px var(--sand);
+    max-height: 25rem;
+    margin-bottom: 1%;
+    overflow-x:hidden;
+}
+
+#titulo {
+    font-size: var(--header2);
+}
+
+.botoes {
+    width          : 100vw;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.general-button {
+    margin    : 0 4rem 0 4rem;
+    min-height: 5rem;
 }
 
 h1{
