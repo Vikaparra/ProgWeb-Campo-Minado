@@ -6,6 +6,10 @@
     align-items:center;
     height: 100vh;
     background-image: url(../../shared/imgs/praias/praia_azul_ensolarada.png);
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,9 +17,7 @@
 }
 
 .side-menu{
-    /* margin: 2rem; */
     display: flex;
-    /* height: 38rem; */
     flex-direction: column;
     padding: 2em 1.5em 0.5em 1.5em;
     background: linear-gradient(

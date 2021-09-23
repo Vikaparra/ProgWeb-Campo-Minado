@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,95 +15,94 @@
 </head>
 
 <body class="background">
-    <h2 class="shared" style="text-align: center; margin-top:1rem; margin-bottom: 1rem; font-size: var(--header2);">seu perfil</h2>
 
-    <div class="box">
-        <form>
-            <ul class="flex-outer">
-                <li>
-                    <label for="campo_nome">Nome Completo:</label>
-                </li>
-                <li>
-                    <input type="text" class="item" placeholder="nome completo">
-                    <span style="color:#CC983D; font-size: 1.2em;">
-                        <i class="fas fa-edit"></i>
-                    </span>    
-                </li>
-                <li>
-                    <label for="campo_datanasc">Data de Nascimento:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
-                    <label for="campo_cpf">CPF:</label>
-                </li>
-                <li>
-                    <input type="date" class="item">
-                    <span style="color:#CC983D; font-size: 1.2em;">
-                        <i class="fas fa-edit"></i>
-                    </span>&emsp;
-                    <input type="number" class="item" placeholder="x x x x x x x x x x x" readonly>
-                    <span style="visibility: hidden; font-size: 1.2em;">
-                        <i class="fas fa-edit"></i>
-                    </span>
-                </li>
-                <li>
-                    <label for="campo_telefone">Telefone com DDD:</label>
-                </li>
-                <li>
-                    <input type="tel" class="item" placeholder="(x x) x x x x x - x x x x">
+    <div class="container">
+        <h2 class="titulo">SEU PERFIL</h2>
+
+
+        <div class="box wrap">
+            <form>
+
+                <label for="campo_nome">Nome Completo:</label>
+                <div class="displayflex row">
+                    <input type="text" placeholder="Insira seu nome completo">
                     <span style="color:#CC983D; font-size: 1.2em;">
                         <i class="fas fa-edit"></i>
                     </span>
-                </li>
-                <li>
-                    <label for="campo_email">E-mail:</label>
-                </li>
-                <li>
-                    <input type="email" class="item" placeholder="exemplo@gmail.com">
+                </div>
+
+                <div class="displayflex row">
+                    <div class="displayflex column">
+                        <label for="campo_datanasc">Data de Nascimento:</label>
+                        <div class="displayflex row">
+                            <input type="date">
+                            <span style="color:#CC983D; font-size: 1.2em;">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="displayflex column">
+                        <label for="campo_cpf">CPF:</label>
+                        <div class="displayflex row">
+                            <input type="number" placeholder="Insira seu CPF" id="cpf">
+                        </div>
+                    </div>
+                </div>
+
+                <label for="campo_telefone">Telefone com DDD:</label>
+                <div class="displayflex row">
+                    <input type="tel" placeholder="(x x) x x x x x - x x x x">
                     <span style="color:#CC983D; font-size: 1.2em;">
                         <i class="fas fa-edit"></i>
                     </span>
-                </li>
-                <li>
-                    <label for="campo_username">Username:</label>
-                </li>
-                <li>
-                    <input type="text" class="item" placeholder="username" readonly>
-                    <span style="visibility: hidden; font-size: 1.2em;">
-                        <i class="fas fa-edit"></i>
-                    </span>
-                </li>
-                <li>
-                    <label for="campo_senha">Senha:</label>
-                </li>
-                <li>
-                    <input type="password" class="item" placeholder="******">
+                </div>
+
+                <label for="campo_email">E-mail:</label>
+                <div class="displayflex row">
+                    <input type="email" placeholder="Insira seu e-mail">
                     <span style="color:#CC983D; font-size: 1.2em;">
                         <i class="fas fa-edit"></i>
                     </span>
-                </li>
-                <li>
-                    <label for="campo_confsenha">Confirme a Senha:</label>
-                </li>
-                <li>
-                    <input type="password" class="item" placeholder="******">
+                </div>
+
+                <label for="campo_username">Username:</label>
+                <input type="text" placeholder="Insira seu username" id="username">
+
+                <label for="campo_confsenha">Confirme a Senha:</label>
+                <div class="displayflex row">
+                    <input type="password" placeholder="Insira sua senha">
                     <span style="color:#CC983D; font-size: 1.2em;">
                         <i class="fas fa-edit"></i>
                     </span>
-                </li>
-            </ul>
-        </form>
+                </div>
+
+
+                <label for="campo_confsenha">Confirme a Senha:</label>
+                <div class="displayflex row">
+                    <input type="password" placeholder="Insira sua senha novamente">
+                    <span style="color:#CC983D; font-size: 1.2em;">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="botoes">
+            <a href="../inicial/inicial.html">
+                <button class="general-button" type="button">
+                    voltar
+                </button>
+            </a>
+            <a href="../tela_menu_principal/tela_menu_principal.html">
+                <button class="general-button" type="submit">
+                    continuar
+                </button>
+            </a>
+        </div>
+
     </div>
 
-    <div style="margin-top: 1em; margin-left: 15px; margin-right: 15px;">
-        <a href="../tela_menu_principal/tela_menu_principal.html">
-            <button class="general-button" type="button">
-                voltar
-            </button>
-        </a>
-        <a href="../tela_menu_principal/tela_menu_principal.html">
-            <button class="general-button" type="submit" style="float: right;">
-                salvar
-            </button>
-        </a>
-    </div>  
-    
 </body>
+
 </html>

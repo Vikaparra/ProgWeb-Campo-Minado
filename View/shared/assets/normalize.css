@@ -30,3 +30,8 @@ button:hover{
 a {
     color: unset;
 }
+
+.titulo {
+    font-size: var(--header2);
+    text-align: center;
+}
