@@ -63,7 +63,7 @@ body {
 }
 
 .imagens {
-    height          : 10em;
+    height          : 8em;
     background-color: var(--white);
     border-radius   : 100px;
     margin          : 0.5em 1em 0.5em 1em;

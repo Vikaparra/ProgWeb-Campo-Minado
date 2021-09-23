@@ -72,6 +72,9 @@ section{
     color: var(--velvet);
 }
 
+#text-final #button-exception{
+    color: var(--sand);
+}
 
 .general-button{
     margin-bottom: 2em;

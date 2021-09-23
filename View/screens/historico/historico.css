@@ -38,7 +38,7 @@ section{
 .background-ranking{
     background-color: saddlebrown;
     border: solid 8px var(--sand);
-    height: 30rem;
+    max-height: 25rem;
     width: 80rem;
     margin-bottom: 1%;
     overflow-x:hidden;
