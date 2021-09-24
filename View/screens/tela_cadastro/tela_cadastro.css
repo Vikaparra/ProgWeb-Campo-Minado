@@ -48,7 +48,7 @@
   background-color: saddlebrown;
   border          : 10px solid #CC983D;
   box-sizing      : border-box;
-  padding         : 1em;
+  padding         : 1em 2em;
 }
 
 input {
