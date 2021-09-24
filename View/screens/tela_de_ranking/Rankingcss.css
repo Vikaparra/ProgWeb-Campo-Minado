@@ -14,12 +14,17 @@
 .box{
     width: 50%;
     max-width: 1200px;
-    margin: 0 auto;
-    height: 80%;
-    top: 20%;
+    margin: 1.5em auto 0 auto;
+    max-height: 20rem;
     background-color:saddlebrown;
     border: 10px solid #CC983D;
     box-sizing: border-box;
+    font-size: var(--body);
+    overflow-x: auto;
+}
+
+#trofeus {
+    height: 9rem;
 }
 
 .tabranking{
@@ -45,4 +50,8 @@ tr.spaceUnder>td {
 .div-img{
     display: flex;
     justify-content: center;
+}
+
+th{
+    color: var(--white);
 }

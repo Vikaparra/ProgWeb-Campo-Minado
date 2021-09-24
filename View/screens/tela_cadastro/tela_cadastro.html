@@ -6,78 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../shared/assets/normalize.css">
     <link rel="stylesheet" href="../shared/assets/button.css">
-    <link rel="shortcut icon" href="../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="tela_cadastro.css">
     <title>Cadastre-se!</title>
 </head>
 
 <body class="background">
-    <h1 class="shared" style="text-align: center; margin-top:1rem; margin-bottom: 1rem; font-size: var(--header2);">Cadastre-se</h1>
+    <div class="container">
+        <h2 class="titulo">CADASTRE-SE</h2>
 
-    <div class="box">
+
+    <div class="box wrap">
         <form>
-            <ul class="flex-outer">
-                <li>
-                    <label for="campo_nome">Nome Completo:</label>
-                </li>
-                <li>
-                    <input type="text" class="item" placeholder="Insira seu nome completo">
-                </li>
-                <li>
-                    <label for="campo_datanasc">Data de Nascimento:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+
+            <label for="campo_nome">Nome Completo:</label>
+            <input type="text"  placeholder="Insira seu nome completo">
+
+            <div class="displayflex row">
+                <div class="displayflex column">
+                   <label for="campo_datanasc">Data de Nascimento:</label>
+                    <input type="date" >
+                </div>
+                <div class="displayflex column">
                     <label for="campo_cpf">CPF:</label>
-                </li>
-                <li>
-                    <input type="date" class="item">&emsp;
-                    <input type="number" class="item" placeholder="Insira seu CPF">
-                </li>
-                <li>
-                    <label for="campo_telefone">Telefone com DDD:</label>
-                </li>
-                <li>
-                    <input type="tel" class="item" placeholder="(x x) x x x x x - x x x x">
-                </li>
-                <li>
-                    <label for="campo_email">E-mail:</label>
-                </li>
-                <li>
-                    <input type="email" class="item" placeholder="Insira seu e-mail">
-                </li>
-                <li>
-                    <label for="campo_username">Username:</label>
-                </li>
-                <li>
-                    <input type="text" class="item" placeholder="Insira seu username">
-                </li>
-                <li>
-                    <label for="campo_senha">Senha:</label>
-                </li>
-                <li>
-                    <input type="password" class="item" placeholder="Insira sua senha">
-                </li>
-                <li>
-                    <label for="campo_confsenha">Confirme a Senha:</label>
-                </li>
-                <li>
-                    <input type="password" class="item" placeholder="Insira sua senha novamente">
-                </li>
-            </ul>
+                    <input type="number"  placeholder="Insira seu CPF">
+                </div>
+            </div>
+
+            <label for="campo_telefone">Telefone com DDD:</label>
+            <input type="tel"  placeholder="(x x) x x x x x - x x x x">
+
+            <label for="campo_email">E-mail:</label>
+            <input type="email"  placeholder="Insira seu e-mail">
+
+            <label for="campo_username">Username:</label>
+            <input type="text"  placeholder="Insira seu username">
+
+            <label for="campo_confsenha">Confirme a Senha:</label>
+            <input type="password"  placeholder="Insira sua senha">
+
+            <label for="campo_confsenha">Confirme a Senha:</label>
+            <input type="password"  placeholder="Insira sua senha novamente">
+    
         </form>
     </div>
 
-    <div style="margin-top: 0.5em; margin-left: 15px; margin-right: 15px;">
-        <a href="../inicial/inicial.html">
-            <button class="general-button" type="button">
-                voltar
-            </button>
-        </a>
-        <a href="../tela_menu_principal/tela_menu_principal.html">
-            <button class="general-button" type="submit" style="float: right;">
-                continuar
-            </button>
-        </a>
-    </div>  
+    <div class="botoes">
+            <a href="../inicial/inicial.html">
+                <button class="general-button" type="button">
+                    voltar
+                </button>
+            </a>
+            <a href="../tela_menu_principal/tela_menu_principal.html">
+                <button class="general-button" type="submit">
+                    continuar
+                </button>
+            </a>
+    </div>
+      
+
+    </div>
     
 </body>
 </html>

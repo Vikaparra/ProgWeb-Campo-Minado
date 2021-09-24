@@ -6,6 +6,10 @@
     align-items:center;
     height: 100vh;
     background-image: url(../../shared/imgs/praias/praia_azul_ensolarada.png);
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,25 +17,33 @@
 }
 
 .side-menu{
-    /* margin: 2rem; */
     display: flex;
-    height: 38rem;
     flex-direction: column;
-    padding: 30px;
+    padding: 2em 1.5em 0.5em 1.5em;
     background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
       ), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
     align-items: center;
     border-radius: 10px;
-    margin: 0px 30px 0px 30px;
-    border: 8px solid var(--sand);
+    margin: 0px 1.5em 0px 1.5em;
+    border: 0.5em solid var(--sand);
 }
 
-.div-buttons{
-    margin-top: 2em;
+.div-buttons-left{
+    margin-top: 0.5em;
+    min-height: 22em;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.div-buttons-right{
+    margin-top: 0.5em;
+    min-height: 16em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .pirate-name{
@@ -40,13 +52,13 @@
 }
 
 .general-button{
-    margin-bottom: 2em;
-    height: 5em;
+    height: 4.5em;
 }
 
 .pirata-img{
+    /* margin-top: ; */
     border-radius: 50%;
-    height: 12em;
+    height: 10em;
     border: 0.5em solid var(--sand);
 }
 
