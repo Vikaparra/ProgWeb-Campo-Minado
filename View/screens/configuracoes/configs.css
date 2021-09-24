@@ -82,9 +82,6 @@ select {
 
 .div-button-voltar {
     position        : absolute;
-    width           : intrinsic;
-    width           : -moz-max-content;
-    width           : -webkit-max-content;
     min-height      : fit-content;
     color           : var(--sand);
     padding         : 1.5% 1.5%;

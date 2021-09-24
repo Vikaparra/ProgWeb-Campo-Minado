@@ -85,6 +85,9 @@ select:-webkit-autofill {
 .img-pirata {
     border-radius: 50%;
     border       : 0.3em solid var(--sand);
+    background-color: white; 
+    width: 150px; 
+    height: 150px;
 }
 
 .div-button {
