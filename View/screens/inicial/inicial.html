@@ -16,22 +16,30 @@
     <div class="container">
         <div class="div-buttons">
             <div>
-                <a href="../login/login.html">
-                    <button class="general-button" type="submit">
-                        entrar
-                    </button>
-                </a>
+                <button id="login_inicial" class="general-button" type="submit">
+                    entrar
+                </button>
             </div>
             <div>
-                <a href="../tela_cadastro/tela_cadastro.html">
-                    <button class="general-button" type="submit">
-                        cadastre-se
-                    </button>
-                </a>
+                <button id="cadastro_inicial" class="general-button" type="submit">
+                    cadastre-se
+                </button>
             </div>
 
         </div>
     </div>
+
+
+    <script>
+        document.getElementById("login_inicial").onclick = function() {
+            location.href = ("../login/login.html");
+        };
+    </script>
+    <script>
+        document.getElementById("cadastro_inicial").onclick = function() {
+            location.href = ("../tela_cadastro/tela_cadastro.html");
+        };
+    </script>
 
 </body>
 

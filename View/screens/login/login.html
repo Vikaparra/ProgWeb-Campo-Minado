@@ -17,7 +17,7 @@
             <!-- <form class="form-login">email</form>
             <form class="form-login">senha</form> -->
             <div class="teste"><img class="img-pirata" src="../../shared/imgs/Pirata_char/pirata_jpg.gif" alt="gif de pixelart de um pirata andando para frente e para trás"></div>
-            
+
             <form>
                 <ul class="flex">
                     <li> <input type="email" id="email" placeholder="email"> </li>
@@ -26,24 +26,32 @@
             </form>
 
             <div class="div-button">
-                <a href="../tela_menu_principal/tela_menu_principal.html">
-                    <button class="general-button" type="submit">
-                        entrar
-                    </button>
-                </a>
+                <button id="entrar_login" class="general-button" type="submit">
+                    entrar
+                </button>
             </div>
 
             <div class="div-button-voltar">
-                <a href="../inicial/inicial.html">
-                    <button class="general-button general-button-menu" type="button">
-                        x
-                    </button>
-                </a>
+                <button id="voltar_login" class="general-button general-button-menu" type="button">
+                    x
+                </button>
             </div>
 
         </div>
-        
+
     </div>
+
+
+    <script>
+        document.getElementById("entrar_login").onclick = function() {
+            location.href = ("../tela_menu_principal/tela_menu_principal.html");
+        };
+    </script>
+    <script>
+        document.getElementById("voltar_login").onclick = function() {
+            location.href = ("../inicial/inicial.html");
+        };
+    </script>
 
 </body>
 
