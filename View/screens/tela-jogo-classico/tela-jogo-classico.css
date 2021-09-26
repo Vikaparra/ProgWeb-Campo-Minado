@@ -118,25 +118,18 @@ aside > button:last-child{
     height: 55vh;
 
     display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #titulo-config{
-    align-self: flex-start;
-}
-
-#info-jogo{
-    align-self: center;
+    padding: 1vw;
 }
 
 #info-jogo p{
     color: var(--white);
     font-size: var(--body);
-}
-
-#botao-config{
-    align-self: flex-end;
 }
 
 h1{

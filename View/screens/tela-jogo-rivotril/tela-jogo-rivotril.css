@@ -108,17 +108,15 @@ aside>button:last-child {
     border: 4px solid var(--sand);
     width: 25vw;
     height: 55vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #titulo-config {
-    align-self: flex-start;
-}
-
-#info-jogo {
-    align-self: center;
+    padding: 1vw;
 }
 
 #info-jogo p {
@@ -126,9 +124,6 @@ aside>button:last-child {
     font-size: var(--body);
 }
 
-#botao-config {
-    align-self: flex-end;
-}
 
 h1 {
     color: var(--white);
