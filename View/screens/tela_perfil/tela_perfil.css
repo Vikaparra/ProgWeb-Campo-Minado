@@ -77,10 +77,10 @@ span {
     font-size: 1.2em;
 }
 
-#campo_cpf_perfil.exceptions {
+#campo_cpf_perfil {
     width: 80%;
 }
 
-#campo_username_perfil.exceptions {
+#campo_username_perfil {
     width: 90%;
 }
