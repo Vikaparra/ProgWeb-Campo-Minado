@@ -1,71 +1,58 @@
 @import url(../../shared/assets/shared.css);
 @import url(../../shared/assets/button.css);
-
 body {
-    display         : flex;
-    justify-content : space-between;
-    align-items     : center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-image: url(../../shared/imgs/BG/principal_sem_logo.png);
-    background-size : cover;
+    background-size: cover;
 }
 
 .box {
-    width              : 28rem;
-    height             : 28rem;
-    padding            : 1rem;
-    display            : flex;
-    flex-direction     : column;
-    background         : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    width: 28rem;
+    height: 28rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
     background-position: center;
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    border             : 5px solid var(--sand);
-    box-sizing         : border-box;
-    position           : relative;
-    justify-content    : center;
-
-}
-
-.teste {
-    display        : flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid var(--sand);
+    box-sizing: border-box;
+    position: relative;
     justify-content: center;
-    margin-bottom  : 20px;
 }
 
-.flex li {
-    height          : 2.5em;
-    margin          : 0.7em;
-    text-align      : center;
-    font-size       : 18px;
-    color           : var(--white);
-    background-color: var(--brown);
-    border-radius   : 8px;
-    box-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 8px 9px rgba(0, 0, 0, 0.25);
-    display         : flex;
-    flex-wrap       : wrap;
-    align-items     : center;
-    margin-bottom   : 1.5em;
+.img-pirata {
+    border-radius: 50%;
+    border: 0.3em solid var(--sand);
+    background-color: white;
+    width: 150px;
+    height: 150px;
 }
 
-li:last-child {
-    margin-bottom: 0.7em;
+.imagem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 input {
-    margin          : 10px;
-    width           : 100%;
-    align-items     : center;
-    border          : unset;
-    color           : unset;
+    margin: 10px;
+    width: 100%;
+    align-items: center;
+    border: unset;
+    color: unset;
     background-color: unset;
-    padding-left    : 5px;
+    padding-left: 5px;
 }
 
 input::placeholder {
-    text-align    : center;
-    font-size     : 18px;
+    text-align: center;
+    font-size: 18px;
     vertical-align: middle;
-    color         : var(--white);
+    color: var(--white);
 }
 
 input:focus,
@@ -78,47 +65,52 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
     -webkit-text-fill-color: var(--white);
-    -webkit-box-shadow     : 0 0 0px 1000px #1f0f09 inset;
-    box-shadow             : 0 0 0px 1000px #1f0f09 inset;
+    -webkit-box-shadow: 0 0 0px 1000px #1f0f09 inset;
+    box-shadow: 0 0 0px 1000px #1f0f09 inset;
 }
 
-.img-pirata {
-    border-radius: 50%;
-    border       : 0.3em solid var(--sand);
-    background-color: white; 
-    width: 150px; 
-    height: 150px;
+.flex li {
+    height: 2.5em;
+    margin: 0.7em;
+    text-align: center;
+    font-size: 18px;
+    color: var(--white);
+    background-color: var(--brown);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 8px 9px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+li:last-child {
+    margin-bottom: 0.7em;
 }
 
 .div-button {
-    position    : absolute;
+    position: absolute;
     /* width       : intrinsic; */
     /* width       : -moz-max-content; */
-    width       : -webkit-max-content;
-    margin-left : auto;
+    width: -webkit-max-content;
+    margin-left: auto;
     margin-right: auto;
-    left        : 0;
-    right       : 0;
-    margin-top  : 27em;
+    left: 0;
+    right: 0;
+    margin-top: 27em;
 }
 
 .div-button-voltar {
-    position    : absolute;
-    margin-left : auto;
+    position: absolute;
+    margin-left: auto;
     margin-right: auto;
-    left        : 21em;
-    right       : 0;
-    margin-top  : -28em;
-}
-
-.botoes {
-    width          : 100vw;
-    display        : flex;
-    justify-content: space-between;
+    left: 21em;
+    right: 0;
+    margin-top: -28em;
 }
 
 .general-button-menu {
-    margin    : 0 4rem 0 4rem;
+    margin: 0 4rem 0 4rem;
     min-height: 4rem;
     width: 4rem;
-} 
+}
