@@ -55,3 +55,9 @@ tr.spaceUnder>td {
 th {
     color: var(--white);
 }
+
+#voltar_ranking{
+    margin-top: 0.5em; 
+    margin-left: 20px; 
+    margin-right: 20px;
+}
