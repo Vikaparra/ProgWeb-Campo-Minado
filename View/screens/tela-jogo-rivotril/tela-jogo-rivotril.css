@@ -1,9 +1,9 @@
-@import url(../../Shared/assets/shared.css);
+@import url(../../shared/assets/shared.css);
 
 body {
     justify-content        : space-between;
     align-items            : center;
-    background             : url(../../Shared/imgs/BG/back-fire.png) no-repeat center center fixed;
+    background             : url(../../shared/imgs/BG/back-fire.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size   : cover;
     -o-background-size     : cover;

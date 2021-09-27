@@ -17,10 +17,10 @@
         <div class="box column">
 
             <p>modo de jogo:</p>
-            <select>
+            <select id="modo_jogo">
                 <option>selecione</option>
-                <option>classico</option>
-                <option>rivotril</option>
+                <option value="classico">classico</option>
+                <option value="rivotril">rivotril</option>
             </select>
             <p>tamanho da grade:</p>
             <div class="slidecontainer">
@@ -41,7 +41,7 @@
 
             <a href="../tela_menu_principal/tela_menu_principal.html">
                 <div class="div-button-voltar">
-                    <img id="retornar" src="../../Shared/imgs/icones/return3.png" alt="Icone de retornar para pagina anterior">
+                    <img id="retornar" src="../../shared/imgs/icones/return3.png" alt="Icone de retornar para pagina anterior">
                 </div>
             </a>
         </div>
@@ -50,7 +50,12 @@
 
     <script>
         document.getElementById("jogar_configs").onclick = function() {
-            location.href = ("../tela-jogo-classico/tela-jogo-classico.html");
+            if(modo_jogo.value == "rivotril"){
+                location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
+            }
+            else{
+                location.href = ("../tela-jogo-classico/tela-jogo-classico.html");
+            }
         };
     </script>
 </body>
