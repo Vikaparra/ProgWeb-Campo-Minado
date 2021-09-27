@@ -2,40 +2,40 @@
 @import url(../../shared/assets/normalize.css);
 @import url(../../shared/assets/button.css);
 
-.background{
-    background-image: url(../../shared/imgs/BG/principal_sem_logo.png); 
-    background-repeat: no-repeat;
+.background {
+    background-image       : url(../../shared/imgs/BG/principal_sem_logo.png);
+    background-repeat      : no-repeat;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
 }
 
-.box{
-    width: 50%;
-    max-width: 1200px;
-    margin: 1.5em auto 0 auto;
-    max-height: 20rem;
-    background-color:saddlebrown;
-    border: 10px solid #CC983D;
-    box-sizing: border-box;
-    font-size: var(--body);
-    overflow-x: auto;
+.box {
+    width           : 50%;
+    max-width       : 1200px;
+    margin          : 1.5em auto 0 auto;
+    max-height      : 20rem;
+    background-color: saddlebrown;
+    border          : 10px solid #CC983D;
+    box-sizing      : border-box;
+    font-size       : var(--body);
+    overflow-x      : auto;
 }
 
 #trofeus {
     height: 9rem;
 }
 
-.tabranking{
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    vertical-align: middle;
-    padding: 1vw;
-    border-spacing: 0 8px;
+.tabranking {
+    width          : 100%;
+    height         : 100%;
+    text-align     : left;
+    vertical-align : middle;
+    padding        : 1vw;
+    border-spacing : 0 8px;
     border-collapse: separate;
-    margin-top: -8px;
+    margin-top     : -8px;
 }
 
 tr:nth-child(even) {
@@ -44,14 +44,14 @@ tr:nth-child(even) {
 
 tr.spaceUnder>td {
     padding-bottom: 0.3em;
-    padding-top: 0.3em;
+    padding-top   : 0.3em;
 }
 
-.div-img{
-    display: flex;
+.div-img {
+    display        : flex;
     justify-content: center;
 }
 
-th{
+th {
     color: var(--white);
 }

@@ -10,9 +10,9 @@ body {
 }
 
 .div-buttons {
-    margin-top : 24rem;
-    align-items: center;
-    display    : flex;
+    margin-top    : 24rem;
+    align-items   : center;
+    display       : flex;
     flex-direction: column;
 }
 

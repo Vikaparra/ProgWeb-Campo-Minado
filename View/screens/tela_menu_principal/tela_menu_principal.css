@@ -1,92 +1,90 @@
 @import url(../../shared/assets/shared.css);
 
-.body{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    height: 100vh;
-    background-image: url(../../shared/imgs/praias/praia_azul_ensolarada.png);
+.body {
+    display                : flex;
+    justify-content        : space-between;
+    align-items            : center;
+    height                 : 100vh;
+    background-image       : url(../../shared/imgs/praias/praia_azul_ensolarada.png);
     -webkit-background-size: cover;
     -moz-background-size   : cover;
     -o-background-size     : cover;
     background-size        : cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
+    background-position    : bottom;
+    background-repeat      : no-repeat;
+    background-size        : 100%;
+
 }
 
-.side-menu{
-    display: flex;
+.side-menu {
+    display       : flex;
     flex-direction: column;
-    padding: 2em 1.5em 0.5em 1.5em;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.7)
-      ), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
-    align-items: center;
+    padding       : 2em 1.5em 0.5em 1.5em;
+    background    : linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    align-items  : center;
     border-radius: 10px;
-    margin: 0px 1.5em 0px 1.5em;
-    border: 0.5em solid var(--sand);
+    margin       : 0px 1.5em 0px 1.5em;
+    border       : 0.5em solid var(--sand);
 }
 
-.div-buttons-left{
-    margin-top: 0.5em;
-    min-height: 22em;
-    display: flex;
-    flex-direction: column;
+.div-buttons-left {
+    margin-top     : 0.5em;
+    min-height     : 22em;
+    display        : flex;
+    flex-direction : column;
     justify-content: space-evenly;
 }
 
-.div-buttons-right{
-    margin-top: 0.5em;
-    min-height: 16em;
-    display: flex;
-    flex-direction: column;
+.div-buttons-right {
+    margin-top     : 0.5em;
+    min-height     : 16em;
+    display        : flex;
+    flex-direction : column;
     justify-content: space-evenly;
 }
 
-.pirate-name{
+.pirate-name {
     text-align: center;
-    color: white;
+    color     : white;
 }
 
-.general-button{
+.general-button {
     height: 4.5em;
 }
 
-.pirata-img{
+.pirata-img {
     /* margin-top: ; */
     border-radius: 50%;
-    height: 10em;
-    border: 0.5em solid var(--sand);
+    height       : 10em;
+    border       : 0.5em solid var(--sand);
 }
 
-.button-jogar{
+.button-jogar {
     background-color: var(--velvet);
-    padding: 40px 70px;
-    font-size: var(--header1);
-    color: white;
+    padding         : 40px 70px;
+    font-size       : var(--header1);
+    color           : white;
 }
 
-h3{
-    font-size: var(--header1);
-    color: white;
+h3 {
+    font-size    : var(--header1);
+    color        : white;
     margin-bottom: 0.7em;
 }
 
-span{
-    display: flex;
+span {
+    display    : flex;
     align-items: center;
-    font-size: 32px;
-    color: white;
+    font-size  : 32px;
+    color      : white;
 }
 
-span img{
-    height: 2em;
+span img {
+    height      : 2em;
     margin-right: 1em;
 }
 
-.button-vermelho{
+.button-vermelho {
     color: var(--velvet);
 }

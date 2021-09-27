@@ -1,58 +1,59 @@
 @import url(../../shared/assets/shared.css);
 @import url(../../shared/assets/button.css);
+
 body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
     background-image: url(../../shared/imgs/BG/principal_sem_logo.png);
-    background-size: cover;
+    background-size : cover;
 }
 
 .box {
-    min-width: 27rem;
-    min-height: 32rem;
-    padding: 2rem 0.5rem 2rem 0.5rem;
-    display: flex;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
+    min-width          : 27rem;
+    min-height         : 32rem;
+    padding            : 2rem 0.5rem 2rem 0.5rem;
+    display            : flex;
+    background         : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 5px solid var(--sand);
-    box-sizing: border-box;
-    position: relative;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    border             : 5px solid var(--sand);
+    box-sizing         : border-box;
+    position           : relative;
+    flex-direction     : column;
+    justify-content    : space-around;
+    align-items        : center;
 }
 
 p {
-    margin-top: 0;
+    margin-top   : 0;
     margin-bottom: 0;
-    color: var(--white);
-    font-size: 25px;
+    color        : var(--white);
+    font-size    : 25px;
 }
 
 select {
-    margin: 0.3em 0 1.5em 0;
+    margin       : 0.3em 0 1.5em 0;
     border-radius: 5px;
-    width: 40%;
-    height: 2em;
-    text-align: center;
-    font-size: var(--body);
+    width        : 40%;
+    height       : 2em;
+    text-align   : center;
+    font-size    : var(--body);
 }
 
 .slidecontainer {
-    margin: 0.3em 0 1.5em 0;
+    margin    : 0.3em 0 1.5em 0;
     text-align: center;
-    display: flex;
+    display   : flex;
 }
 
 .inputcontainer {
-    height: 2em;
-    width: 5rem;
+    height      : 2em;
+    width       : 5rem;
     padding-left: 12px;
-    text-align: center;
-    font-size: var(--body);
+    text-align  : center;
+    font-size   : var(--body);
 }
 
 #gridtext {
@@ -60,41 +61,41 @@ select {
 }
 
 .slider {
-    margin-top: 0;
+    margin-top   : 0;
     margin-bottom: 0;
-    width: 15em;
+    width        : 15em;
 }
 
 .rangevalue {
     margin-left: 0.3em;
-    color: var(--white);
+    color      : var(--white);
 }
 
 .general-button-play {
-    padding: 1rem 15px;
+    padding         : 1rem 15px;
     background-color: var(--velvet);
-    font-size: 23px;
-    width: 9em;
-    margin-bottom: 1.5em;
+    font-size       : 23px;
+    width           : 9em;
+    margin-bottom   : 1.5em;
 }
 
 .div-button-voltar {
-    position: absolute;
-    min-height: fit-content;
-    color: var(--sand);
-    padding: 1.5% 1.5%;
-    border: 0.7rem solid var(--sand);
+    position        : absolute;
+    min-height      : fit-content;
+    color           : var(--sand);
+    padding         : 1.5% 1.5%;
+    border          : 0.7rem solid var(--sand);
     background-color: var(--brown);
-    border-radius: 10px;
-    font-size: var(--body);
-    text-align: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 20px 4px 5px rgba(0, 0, 0, 0.25);
-    left: 21em;
-    margin-top: -28em;
+    border-radius   : 10px;
+    font-size       : var(--body);
+    text-align      : center;
+    box-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 20px 4px 5px rgba(0, 0, 0, 0.25);
+    left            : 21em;
+    margin-top      : -28em;
 }
 
 #retornar {
-    width: 2rem;
-    height: 2rem;
+    width      : 2rem;
+    height     : 2rem;
     align-items: center;
 }

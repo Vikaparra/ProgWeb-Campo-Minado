@@ -13,15 +13,6 @@ body {
     background-repeat      : no-repeat;
 }
 
-.container {
-    width          : 100vw;
-    height         : 100vh;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-around;
-    align-items    : center;
-}
-
 .box {
     min-width          : 40rem;
     min-height         : 20rem;
@@ -39,25 +30,20 @@ body {
     align-items        : center;
 }
 
-#titulo {
-    font-size: var(--header2);
-}
-
 .container-imagens {
     display        : flex;
     justify-content: space-between;
     flex-wrap      : wrap;
 }
 
-.container-imagens div{
-    display: flex;
+.container-imagens div {
+    display       : flex;
     flex-direction: column;
-    align-items: center;
-    color: var(--white);
-    
+    align-items   : center;
+    color         : var(--white);
 }
 
-.container-imagens div h2{
+.container-imagens div h2 {
     font-size: var(--body);
 }
 
@@ -66,7 +52,7 @@ body {
     background-color: var(--white);
     border-radius   : 100px;
     margin          : 0.5em 1em 0.5em 1em;
-    border: solid 8px var(--sand);
+    border          : solid 8px var(--sand);
 }
 
 .botoes {

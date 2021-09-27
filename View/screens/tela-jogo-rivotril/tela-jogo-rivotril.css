@@ -1,63 +1,64 @@
 @import url(../../Shared/assets/shared.css);
+
 body {
-    justify-content: space-between;
-    align-items: center;
-    background: url(../../Shared/imgs/BG/back-fire.png) no-repeat center center fixed;
+    justify-content        : space-between;
+    align-items            : center;
+    background             : url(../../Shared/imgs/BG/back-fire.png) no-repeat center center fixed;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
 }
 
 .container {
-    width: 100%;
-    display: flex;
+    width          : 100%;
+    display        : flex;
     justify-content: center;
-    flex-direction: row;
-    vertical-align: middle;
+    flex-direction : row;
+    vertical-align : middle;
 }
 
 section {
-    display: flex;
-    padding: 20px;
-    padding-top: 0px;
-    margin-right: 20px;
-    width: 45vw;
-    height: 90vh;
-    background-color: white;
-    align-self: center;
-    border: 10px solid #CC983D;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg);
+    display            : flex;
+    padding            : 20px;
+    padding-top        : 0px;
+    margin-right       : 20px;
+    width              : 45vw;
+    height             : 90vh;
+    background-color   : white;
+    align-self         : center;
+    border             : 10px solid #CC983D;
+    box-sizing         : border-box;
+    box-shadow         : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius      : 20px;
+    flex-direction     : column;
+    align-items        : center;
+    background-image   : url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg);
     background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
+    background-size    : 80%;
+    background-repeat  : no-repeat;
 }
 
 #title-usu {
-    text-align: center;
+    text-align      : center;
     background-color: var(--sand);
-    min-width: 20em;
-    width: auto;
-    height: 1.5em;
-    font-size: var(--body);
+    min-width       : 20em;
+    width           : auto;
+    height          : 1.5em;
+    font-size       : var(--body);
 }
 
 #text-final {
     text-align: center;
-    font-size: 20px;
-    margin: 0;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%)
+    font-size : 20px;
+    margin    : 0;
+    position  : relative;
+    top       : 50%;
+    transform : translate(0, -50%)
 }
 
 #text-final h1 {
-    color: var(--velvet);
+    color      : var(--velvet);
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -66,32 +67,32 @@ section {
 }
 
 aside {
-    height: 100vh;
-    width: 25vw;
-    text-align: center;
-    display: flex;
+    height        : 100vh;
+    width         : 25vw;
+    text-align    : center;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
+    align-items   : center;
 }
 
 aside>p {
-    color: var(--white);
+    color    : var(--white);
     font-size: var(--body);
 }
 
 aside>button:last-child {
     background-color: var(--velvet);
-    height: 4em;
+    height          : 4em;
 }
 
 #time {
     background-color: #804000;
-    border: 4px solid var(--sand);
-    width: 25vw;
-    height: 7vh;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    border          : 4px solid var(--sand);
+    width           : 25vw;
+    height          : 7vh;
+    display         : flex;
+    flex-wrap       : nowrap;
+    align-items     : center;
 }
 
 .time-item2 h1 {
@@ -99,20 +100,20 @@ aside>button:last-child {
 }
 
 #time div {
-    flex: 1;
+    flex      : 1;
     text-align: center;
 }
 
 #config-jogo {
     background-color: #804000;
-    border: 4px solid var(--sand);
-    width: 25vw;
-    height: 55vh;
+    border          : 4px solid var(--sand);
+    width           : 25vw;
+    height          : 55vh;
 
-    display:flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: space-between;
-    align-items: center;
+    align-items    : center;
 }
 
 #titulo-config {
@@ -120,17 +121,17 @@ aside>button:last-child {
 }
 
 #info-jogo p {
-    color: var(--white);
+    color    : var(--white);
     font-size: var(--body);
 }
 
 
 h1 {
-    color: var(--white);
+    color      : var(--white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .general-button {
     margin-bottom: 2em;
-    height: 4.5em;
+    height       : 4.5em;
 }
