@@ -52,6 +52,20 @@ input {
     padding-left    : 0.5em;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: var(--white);
+    -webkit-box-shadow     : 0 0 0px 1000px #1f0f09 inset;
+    box-shadow             : 0 0 0px 1000px #1f0f09 inset;
+}
+
 .botoes {
     width          : 100vw;
     display        : flex;
