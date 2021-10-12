@@ -46,9 +46,7 @@ class Tabuleiro{
 
         while (numBombas < numeroBombas) {
             let linha = Math.round(Math.random() * ((numeroCelulas-1) - 0) + 0);
-            console.log(linha)
             let coluna = Math.round(Math.random() * ((numeroCelulas-1) - 0) + 0);
-            console.log(coluna)
 
             if(this.matriz[linha][coluna] == -1){
                 this.matriz[linha][coluna] = 1;
@@ -61,3 +59,6 @@ class Tabuleiro{
         console.log(this.matriz)
     }
 }
+
+var teste = new Tabuleiro(7, 2);
+teste.printMatriz();
