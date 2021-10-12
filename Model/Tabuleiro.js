@@ -1,5 +1,7 @@
 "use strict";
 
+export class Tabuleiro {Tabuleiro}
+
 class Tabuleiro{
 
     /*
@@ -59,6 +61,3 @@ class Tabuleiro{
         console.log(this.matriz)
     }
 }
-
-var teste = new Tabuleiro(7, 2);
-teste.printMatriz();
