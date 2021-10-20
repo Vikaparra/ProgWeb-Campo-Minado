@@ -17,7 +17,7 @@ class Tabuleiro{
             this.numeroCelulas = numeroCelulas;
         }
 
-        let limiteBombas = (numeroCelulas*30)/100;
+        let limiteBombas = (numeroCelulas*numeroCelulas*30)/100;
         if(numeroBombas > limiteBombas || numeroBombas < 1){
             window.alert("Insira um número de bombas entre 1 e " + limiteBombas);
             
@@ -35,6 +35,8 @@ class Tabuleiro{
             
         }
 
+        this.celulasAbertas = 0;
+        this.celulasSb = numeroCelulas - numeroBombas;
         this.matriz = matriz;
 
         this.inserirBomas(numeroCelulas, numeroBombas);
