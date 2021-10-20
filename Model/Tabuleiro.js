@@ -54,6 +54,12 @@ class Tabuleiro{
             if(this.matriz[linha][coluna] == 0){
                 this.matriz[linha][coluna] = "B";
                 numBombas++;
+                //talvez ja fazer uma função pra ja somar 1 nos espaços em volta aqui
+                //vai ficar mais eficiente
+                // !!!!!!!!!!
+                // !!!!!!!!!!
+                // !!!!!!!!!!
+                // le ali em cima
             }
         }
         this.printMatriz();
