@@ -5,9 +5,8 @@ export class Tabuleiro {Tabuleiro}
 class Tabuleiro{
 
     /*
-    1 = bomba
-    -1 = sem bomba
-    0 = aberto
+    B = bomba
+    0 = sem bomba
     */
 
     constructor(numeroCelulas, numeroBombas){
@@ -31,7 +30,7 @@ class Tabuleiro{
         for (let i = 0; i < numeroCelulas; i++) {
             matriz.push([]);
             for(let j = 0; j < numeroCelulas; j++){
-                matriz[i].push(-1);
+                matriz[i].push(0);
             }
             
         }
@@ -50,8 +49,8 @@ class Tabuleiro{
             let linha = Math.round(Math.random() * ((numeroCelulas-1) - 0) + 0);
             let coluna = Math.round(Math.random() * ((numeroCelulas-1) - 0) + 0);
 
-            if(this.matriz[linha][coluna] == -1){
-                this.matriz[linha][coluna] = 1;
+            if(this.matriz[linha][coluna] == 0){
+                this.matriz[linha][coluna] = "B";
                 numBombas++;
             }
         }
