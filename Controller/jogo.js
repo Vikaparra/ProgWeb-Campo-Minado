@@ -67,7 +67,11 @@ function celulasZero(tabuleiro, linha, coluna){
     for(let colunas=coluna-1; colunas <= (coluna+1); colunas++){
         for(let linhas=linha-1; linhas <= (linha+1); linhas++){
             if(colunas >= 0 && linhas >= 0 && colunas < tabuleiro.numeroCelulas && linhas < tabuleiro.numeroCelulas){
-                if(tabuleiro.matriz[linhas][colunas]==0){
+                if(tabuleiro.matriz[linhas][colunas]===0){
+                    // console.log("colunas"+colunas);
+                    // console.log("linhas"+linhas);
+                    // console.log("-------------------------");
+                    tabuleiro.matriz[linhas][colunas]="";
                     //mostra a casa e chama a função novamente
                     //bloqueia no html pra nao clicar mais ---> style.pointerEvents = 'none';
                     tabuleiro.celulasAbertas++;
