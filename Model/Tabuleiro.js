@@ -1,6 +1,6 @@
 "use strict";
 
-export class Tabuleiro {Tabuleiro}
+// export class Tabuleiro {Tabuleiro}
 
 class Tabuleiro{
 
@@ -54,6 +54,7 @@ class Tabuleiro{
                 numBombas++;
             }
         }
+        this.printMatriz();
     }
 
     printMatriz(){

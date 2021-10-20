@@ -1,6 +1,6 @@
 "use strict";
 
-export class Tabuleiro {Tabuleiro}
+// export class Tabuleiro {Tabuleiro}
 
 //Função para saber quantas bombas há perto da célula
 function verificar(tabuleiro, linha, coluna){
