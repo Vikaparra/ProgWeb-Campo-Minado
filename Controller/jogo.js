@@ -1,6 +1,11 @@
 "use strict";
 
+
 // export class Tabuleiro {Tabuleiro}
+
+ var tabuleiro = document.createElement('script');
+ tabuleiro.src = '../View/screens/configuracoes/configuracoes.js';
+ document.head.appendChild(tabuleiro); // Importado JS do jogador
 
 //Função para saber quantas bombas há perto da célula
 function verificar(tabuleiro, linha, coluna){
@@ -105,3 +110,14 @@ function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir di
 }
 
 // Parte do Tabuleiro para testes
+
+
+
+
+
+
+
+
+
+//VIEW   
+console.log(tabuleiro);

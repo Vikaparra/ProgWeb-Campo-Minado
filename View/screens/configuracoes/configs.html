@@ -24,7 +24,7 @@
             </select>
             <p>tamanho da grade:</p>
             <div class="slidecontainer">
-                <input type="number" class="inputcontainer" id="quantity" name="quantity" min="1" max="100" onchange="gridvalue.value=value; gridvalue2.value=value">
+                <input type="number" class="inputcontainer" id="quantity" name="quantity" min="1" max="20" onchange="gridvalue.value=value; gridvalue2.value=value; onchangeQtdCelulas()">
                 <p id="gridtext"><output id="gridvalue">50</output> x<output class="rangevalue" id="gridvalue2">50</output></p>
             </div>
             <p>numero de bombas:</p>
@@ -37,7 +37,6 @@
                         jogar!
                     </button>
             </div>
-            <p>tempo: 00:00</p>
 
             <a href="../tela_menu_principal/tela_menu_principal.html">
                 <div class="div-button-voltar">
@@ -48,7 +47,7 @@
     </div>
 
 
-    <script>
+     <script>
         document.getElementById("jogar_configs").onclick = function() {
             if(modo_jogo.value == "rivotril"){
                 location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
@@ -58,6 +57,8 @@
             }
         };
     </script>
+    <script src="../../../Model/Tabuleiro.js"></script>
+    <script src="./configuracoes.js"></script>
 </body>
 
 </html>
