@@ -3,9 +3,9 @@
 
 // export class Tabuleiro {Tabuleiro}
 
- var tabuleiro = document.createElement('script');
- tabuleiro.src = '../View/screens/configuracoes/configuracoes.js';
- document.head.appendChild(tabuleiro); // Importado JS do jogador
+//  var tabuleiro = document.createElement('script');
+//  tabuleiro.src = '../View/screens/configuracoes/configuracoes.js';
+//  document.head.appendChild(tabuleiro); // Importado JS do jogador
 
 //Função para saber quantas bombas há perto da célula
 function verificar(tabuleiro, linha, coluna){
@@ -111,13 +111,31 @@ function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir di
 
 // Parte do Tabuleiro para testes
 
-
-
-
-
-
-
+var tabuleiro = sessionStorage.getItem("tabuleiro");
+tabuleiro = JSON.parse(tabuleiro);
 
 
 //VIEW   
-console.log(tabuleiro);
+function buildGridLayout(){
+
+    let matriz = tabuleiro.matriz;
+
+    var divMatriz = document.querySelector("#container-principal");
+    var matrizGUI = document.createElement("div");
+    matrizGUI.className = "matriz-GUI";
+
+    divMatriz.appendChild(matrizGUI);
+
+    matriz.forEach(linha => {
+        var linhaMatrizGUI = document.createElement("div");
+        linhaMatrizGUI.className = "linha-matriz-GUI";
+
+        matrizGUI.appendChild(linhaMatrizGUI);
+        linha.forEach(celula => {
+            var celulaMatrizGUI = document.createElement("div");
+            celulaMatrizGUI.className = "celula-matriz-GUI";
+
+            linhaMatrizGUI.appendChild(celulaMatrizGUI);
+        })
+    });
+}

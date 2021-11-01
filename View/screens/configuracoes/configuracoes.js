@@ -16,5 +16,9 @@ botaoEnviar.addEventListener("click", ()=>{
     var valorQtdBombas = qtdBombas.value;
     
     tabuleiro = new Tabuleiro(valorQtdCelulas, valorQtdBombas, valorModoDeJogo);
+
+    let jsonTabuleiro = JSON.stringify(tabuleiro);
+
+    sessionStorage.setItem("tabuleiro", jsonTabuleiro);
 });
 
