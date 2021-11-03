@@ -22,24 +22,16 @@ body {
 section {
     display               : flex;
     padding               : 20px;
-    padding-top           : 0px;
     margin-right          : 20px;
     width                 : 45vw;
-    height                : 90vh;
+    max-height            : 90vh;
     background-color      : white;
-    align-self            : center;
     border                : 10px solid #CC983D;
     box-sizing            : border-box;
     box-shadow            : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius         : 20px;
-    flex-direction        : column;
     align-items           : center;
     justify-content       : center;
-    /* background-image   : url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg); */
-    background-position   : center;
-    background-size       : 80%;
-    background-repeat     : no-repeat;
-
 }
 
 #title-usu {
@@ -51,7 +43,7 @@ section {
     min-width       : 20em;
     max-width       : 30em;
     font-size       : var(--body);
-    margin-top      : -31.5em;
+    top      : 1em;
     text-shadow     : 3px 6px 5px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.25);
     filter          : drop-shadow(1px 6px 5px rgba(0, 0, 0, 0.10));
 }
@@ -110,14 +102,9 @@ aside>button:last-child {
     padding         : 0.8em 0;
 }
 
-.time-item1 {
-    width: auto;
-}
 
 .time-item2 h1 {
     color: var(--sand);
-    width: auto;
-
 }
 
 #time div {
@@ -129,20 +116,18 @@ aside>button:last-child {
     background-color: #804000;
     border          : 4px solid var(--sand);
     width           : 100%;
-    height          : 19em;
+    height          : 20em;
     display         : flex;
     flex-direction  : column;
     justify-content : space-evenly;
     align-items     : center;
 }
 
-#titulo-config {
-    padding: 1vw;
-}
 
 #info-jogo p {
-    color    : var(--white);
-    font-size: var(--body);
+    color      : var(--white);
+    font-size  : 15px;
+    line-height: 3em;
 }
 
 h1 {
