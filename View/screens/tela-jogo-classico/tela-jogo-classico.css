@@ -34,7 +34,8 @@ section {
     border-radius      : 20px;
     flex-direction     : column;
     align-items        : center;
-    background-image   : url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg);
+    justify-content    : center;
+    /* background-image   : url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg); */
     background-position: center;
     background-size    : 80%;
     background-repeat  : no-repeat;
@@ -44,6 +45,8 @@ section {
 #title-usu {
     text-align      : center;
     background-color: var(--sand);
+    margin-top      : -8px;
+    margin-bottom   : 8px;
     min-width       : 20em;
     width           : auto;
     height          : 1.5em;

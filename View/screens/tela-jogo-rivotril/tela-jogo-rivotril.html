@@ -44,7 +44,7 @@
                     <h1>TEMPO</h1>
                 </div>
                 <div class="time-item2">
-                    <h1>00:00</h1>
+                    <h1 id="tempo"></h1>
                 </div>
             </div>
 
@@ -61,13 +61,15 @@
                 <br/>
 
                 <div id="info-jogo">
-                    <p>
-                        Numero de bombas: 4
+                 
+                        <p id="numero-bombas"></p>
                         <br/>
-                        <br/> Grid: 7x7
                         <br/>
-                        <br/> Tempo padrao: 12min
-                    </p>
+                        <p id="grid"></p>
+                        <br/>
+                        <br/> 
+                        <!-- <p>Tempo padrao: 12min</p> -->
+                 
                 </div>
 
                 <br/>
@@ -81,7 +83,7 @@
             <br/>
             <br/>
 
-            <button class="general-button">trapaca</button>
+            <button id="trapaca" class="general-button">trapaca</button>
         </aside>
     </div>
 
@@ -101,6 +103,8 @@
             location.href = ("../configuracoes/configs.html");
         };
     </script>
+    <script src="../../Shared/assets/telaJogo.js"></script>
+    <script src="../../../Model/Tabuleiro.js"></script>
 
 </body>
 

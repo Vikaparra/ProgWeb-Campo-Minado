@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Pixel-Art Regular';
-    src        : url(../fonts/pixelart.ttf) format('ttf'),
-        url(../fonts/pixelart.woff) format('woff');
+    font-family: 'Dogica Regular';
+    src        : url(../fonts/dogica/TTF/dogica.ttf) format('ttf'),
+        url(../fonts/dogica/dogica.woff) format('woff');
 }
 
 * {
-    font-family: 'Pixel-Art Regular';
+    font-family: 'Dogica Regular';
 
     padding        : 0;
     margin         : 0;

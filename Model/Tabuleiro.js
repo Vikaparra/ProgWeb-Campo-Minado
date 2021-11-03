@@ -51,8 +51,9 @@ class Tabuleiro{
         this.celulasAbertas = 0;
         this.celulasSb = numeroCelulas - numeroBombas;
         this.matriz = matriz;
-
+        
         this.inserirBomas(numeroCelulas, numeroBombas);
+        this.preencherNumeros();
         
     };
 
@@ -81,4 +82,37 @@ class Tabuleiro{
     printMatriz(){
         console.log(this.matriz)
     }
+
+    verificar(linha, coluna){
+    
+
+        console.log("aoooba")
+        var numeroBombasEncontradas = 0;
+    
+        if(this.matriz[linha][coluna] == "B"){
+           return "B";
+        }else{
+            for(let colunas=coluna-1; colunas <= (coluna+1); colunas++){
+                for(let linhas=linha-1; linhas <= (linha+1); linhas++){
+                    if(colunas >= 0 && linhas >= 0 && colunas < this.numeroCelulas && linhas < this.numeroCelulas){
+                        if(this.matriz[linhas][colunas]=="B"){
+                            numeroBombasEncontradas++;
+                        }
+                    }  
+                }
+            }
+            return numeroBombasEncontradas;
+        }
+    }
+
+    //Função para preencher o this com numeros das bombas em volta
+    preencherNumeros(){
+        
+    for (let coluna = 0; coluna < this.numeroCelulas; coluna++) {
+        for (let linha = 0; linha < this.numeroCelulas; linha++) {
+            this.matriz[linha][coluna] = this.verificar(linha, coluna);        
+        }
+    }
+}
+
 }
