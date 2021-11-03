@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Dogica Regular';
-    src        : url(../fonts/dogica/TTF/dogica.ttf) format('ttf'),
-        url(../fonts/dogica/dogica.woff) format('woff');
+    src        : url(../fonts/dogica/TTF/dogicapixelbold.ttf) format('ttf'),
+        url(../fonts/dogica/dogicapixelbold.woff) format('woff');
 }
 
 * {
