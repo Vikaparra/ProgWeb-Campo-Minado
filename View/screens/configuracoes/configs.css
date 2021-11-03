@@ -30,7 +30,7 @@ p {
     margin-top   : 0;
     margin-bottom: 0;
     color        : var(--white);
-    font-size    : 25px;
+    font-size    : 20px;
 }
 
 select {
@@ -46,6 +46,7 @@ select {
     margin    : 0.3em 0 1.5em 0;
     text-align: center;
     display   : flex;
+
 }
 
 .inputcontainer {
@@ -74,9 +75,8 @@ select {
 .general-button-play {
     padding         : 1rem 15px;
     background-color: var(--velvet);
-    font-size       : 23px;
+    font-size       : 22px;
     width           : 9em;
-    margin-bottom   : 1.5em;
 }
 
 .div-button-voltar {

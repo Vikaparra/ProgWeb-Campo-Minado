@@ -16,7 +16,7 @@ if(tabuleiro.tempo != null){
 
 
 var bombas = document.getElementById("numero-bombas");
-bombas.innerText = ("Numero de bombas: " + tabuleiro.numeroBombas);
+bombas.innerText = ("Numero de Bombas: " + tabuleiro.numeroBombas);
 
 var grid = document.getElementById("grid");
 grid.innerText = ("Grid: " + tabuleiro.numeroCelulas + "x" + tabuleiro.numeroCelulas);

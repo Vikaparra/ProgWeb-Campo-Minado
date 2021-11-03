@@ -58,6 +58,7 @@
     border-radius: 50%;
     height       : 10em;
     border       : 0.5em solid var(--sand);
+    margin: 0 auto 0 auto
 }
 
 .button-jogar {
@@ -87,4 +88,8 @@ span img {
 
 .button-vermelho {
     color: var(--velvet);
+}
+
+#divimagem {
+    text-align: center;
 }
