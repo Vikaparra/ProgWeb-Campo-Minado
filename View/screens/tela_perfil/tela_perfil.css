@@ -18,6 +18,8 @@
 
 .column {
     flex-direction: column;
+    line-height: 1;
+    align-self: flex-end;
 }
 
 .displayflex {
