@@ -16,25 +16,25 @@
     <div class="container">
         <div class="box column">
 
-            <p>modo de jogo:</p>
+            <p>MODO DE JOGO:</p>
             <select id="modo_jogo">
-                <option>selecione</option>
-                <option value="classico">classico</option>
-                <option value="rivotril">rivotril</option>
+                <option>SELECIONE</option>
+                <option value="classico">CLASSICO</option>
+                <option value="rivotril">RIVOTRIL</option>
             </select>
-            <p>tamanho da grade:</p>
+            <p>TAMANHO DA GRADE:</p>
             <div class="slidecontainer">
                 <input type="number" class="inputcontainer" id="quantity" name="quantity" min="1" max="20" onchange="gridvalue.value=value; gridvalue2.value=value; onchangeQtdCelulas()">
                 <p id="gridtext"><output id="gridvalue">50</output> x<output class="rangevalue" id="gridvalue2">50</output></p>
             </div>
-            <p>numero de bombas:</p>
+            <p>NUMERO DE BOMBAS:</p>
             <div class="slidecontainer">
                 <input type="range" min="1" max="99" value="50" class="slider" id="myRange" onchange="bombvalue.value=value">
                 <output class="rangevalue" id="bombvalue">50</output>
             </div>
             <div>
                 <button id="jogar_configs" class="general-button general-button-play" type="submit">
-                        jogar!
+                        JOGAR!
                     </button>
             </div>
 
