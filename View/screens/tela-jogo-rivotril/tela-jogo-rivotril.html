@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="../../shared/assets/button.css">
     <link rel="stylesheet" href="../../shared/assets/normalize.css">
     <link rel="stylesheet" href="tela-jogo-rivotril.css">
+    <link rel="stylesheet" href="../../Shared/assets/matrizGUI.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
     <title>Campo Minado - Rivotril</title>
 </head>
 
-<body>
+<body onload="buildGridLayout()">
 
     <div id="container-principal" class="container">
         <section>
             <div id="title-usu">
                 <b>AHOY, USUARIO</b>
             </div>
-            <div id="text-final">
+            <!-- <div id="text-final">
                 <h1>FIM DE JOGO !</h1>
                 <br/>
                 <br/>
@@ -32,7 +33,7 @@
                 <button id="jogar_novamente_rivotril" class="general-button">JOGAR DE NOVO</button>
                 <br/>
                 <button id="sair_rivotril" class="general-button">SAIR</button>
-            </div>
+            </div> -->
         </section>
         <aside>
             <br/>
@@ -88,7 +89,7 @@
     </div>
 
 
-    <script>
+    <!-- <script>
         document.getElementById("jogar_novamente_rivotril").onclick = function() {
             location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
         };
@@ -102,9 +103,10 @@
         document.getElementById("configs_rivotril").onclick = function() {
             location.href = ("../configuracoes/configs.html");
         };
-    </script>
-    <script src="../../Shared/assets/telaJogo.js"></script>
+    </script> -->
     <script src="../../../Model/Tabuleiro.js"></script>
+    <script src="../../../Controller/jogo.js"></script>
+    <script src="../../Shared/assets/telaJogo.js"></script>
 
 </body>
 

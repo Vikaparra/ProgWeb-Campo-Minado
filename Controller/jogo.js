@@ -2,6 +2,7 @@
 
 var tabuleiro = sessionStorage.getItem("tabuleiro");
     tabuleiro = JSON.parse(tabuleiro);
+    console.log(tabuleiro)
 
 // export class Tabuleiro {Tabuleiro}
 
@@ -100,6 +101,7 @@ function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir di
     //tornar display de "vitória" ou "derrota" visível
     if(resultado=="D"){
         window.alert("PERDEU OTARIO");
+        derrotaGUIEvent();
         //display DIV de derrota
     }
     else {
@@ -208,4 +210,68 @@ function trapaca(){
         }
         }
     }, 3000);
+}
+
+function derrotaGUIEvent(){
+    let tabuleiroGUI = document.querySelector("#container-principal section");
+    let overlayTela = document.createElement("div");
+    overlayTela.style = ("width: "+ (tabuleiroGUI.getBoundingClientRect().width - 60) + "px; height: "+ (tabuleiroGUI.getBoundingClientRect().height - 60) +"px; background-color: white; position:absolute; index: 400; display: flex; flex-direction: column; align-items: center; justify-content: space-around;");
+    tabuleiroGUI.appendChild(overlayTela);
+
+
+    // var overlayTela = document.createElement("div");
+    // overlayTela.style = "";
+    // overlayTela.appendChild(overlayTela);
+
+    var textoFimDeJogo = document.createElement("h1");
+    textoFimDeJogo.innerText = "FIM DE JOGO!";
+    textoFimDeJogo.style = "color: var(--velvet)";
+    overlayTela.appendChild(textoFimDeJogo);
+
+    var divTempPontos = document.createElement("div");
+    divTempPontos.style = "display: flex; flex-direction: column; align-items: center; justify-content: space-around; height: 10em; color: black;";
+    overlayTela.appendChild(divTempPontos);
+
+    var tempoFinal = document.createElement("h2");
+    tempoFinal.innerText = "00:00";
+    divTempPontos.appendChild(tempoFinal);
+    var pontuacao = document.createElement("h3");
+    pontuacao.innerText = ("PONTUACAO: " + 3);
+    divTempPontos.appendChild(pontuacao);
+
+    var divButtons = document.createElement("div");
+    divButtons.style = "display: flex; flex-direction: column; justify-content: space-around; align-items: center; height: 15em;";
+    overlayTela.appendChild(divButtons);
+
+    var jogarNovementeBtn = document.createElement("button");
+    jogarNovementeBtn.innerText = "JOGAR DE NOVO";
+    jogarNovementeBtn.className = "general-button";
+    jogarNovementeBtn.addEventListener("click", ()=> {
+        
+        sessionStorage.setItem("tabuleiro", JSON.stringify(new Tabuleiro(tabuleiro.numeroCelulas,tabuleiro.numeroBombas, tabuleiro.modoJogo)))
+        document.location.reload(true);
+    });
+    divButtons.appendChild(jogarNovementeBtn);
+
+    var sairBtn = document.createElement("button");
+    sairBtn.innerHTML = "SAIR";
+    sairBtn.style = "color: var(--velvet)"
+    sairBtn.className = "general-button";
+    sairBtn.addEventListener("click", ()=> document.location.href = "../../screens/configuracoes/configs.html");
+    divButtons.appendChild(sairBtn);
+
+}
+
+function startTimer(duracao, display){
+    var timer = duracao;
+    var minutos;
+    var segundos;
+
+    setInterval(()=>{
+        minutos = parseInt(timer / 60, 10);
+        segundos = parseInt(minutos % 60, 10);
+
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+    })
 }

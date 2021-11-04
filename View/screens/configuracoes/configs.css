@@ -49,6 +49,10 @@ select {
 
 }
 
+#modo_jogo{
+    font-size    : 1em;
+}
+
 .inputcontainer {
     height      : 2em;
     width       : 5rem;
