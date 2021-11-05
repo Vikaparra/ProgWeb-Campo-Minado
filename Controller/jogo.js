@@ -201,7 +201,7 @@ function trapaca(){
         for(let j=0; j < matriz[0].length; j++){
            if(matriz[i][j] == "B"){
                 document.getElementById(idStringfy(i, j)).style = "background-color:red;";
-                document.getElementById(idStringfy(i, j)).innerHTML = ("<img id='bombastrapaca' src='../../../View/shared/imgs/Bomba/bomba.ico'>");
+                document.getElementById(idStringfy(i, j)).innerHTML = ("<img id='bombastrapaca' src='../../../View/shared/imgs/Bomba/bombear1.png'>");
             }
         }
     }

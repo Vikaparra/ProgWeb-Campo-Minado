@@ -140,6 +140,8 @@ h1 {
 }
 
 #bombastrapaca{
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 75%;
+    max-height: 75%;
+    min-width: 60%;
+    min-height: 60%;
 }
