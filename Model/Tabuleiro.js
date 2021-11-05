@@ -49,7 +49,7 @@ class Tabuleiro{
         }
 
         this.celulasAbertas = 0;
-        this.celulasSb = numeroCelulas - numeroBombas;
+        this.celulasSb = (numeroCelulas*numeroCelulas) - numeroBombas;
         this.matriz = matriz;
         
         this.inserirBomas(numeroCelulas, numeroBombas);

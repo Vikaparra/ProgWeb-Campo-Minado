@@ -22,10 +22,12 @@ function clique(tabuleiro, linha, coluna){
     switch (celula) {
         case 0: //se a célula não tiver bombas (nela e perto)
             //roda função recursiva pra abrir tudo que for 0 em volta
+            // tabuleiro.celulasAbertas++;
             celulasZero(tabuleiro, linha, coluna);
             if(tabuleiro.celulasAbertas==tabuleiro.celulasSb){
                 fimDeJogo("V");
             }
+             console.log("clique: "+tabuleiro.celulasAbertas);
             break;
 
         case "B": //se a célula tiver bomba (nela)
@@ -35,17 +37,17 @@ function clique(tabuleiro, linha, coluna){
         default: //se a célula tiver bombas (perto)
             //so mostra normalmente o valor
             //bloqueia no html pra nao poder clicar mais
-            if(document.getElementById(idStringfy(linha, coluna)).style.backgroundColor == "red"){
+            if(document.getElementById(idStringfy(linha, coluna)).style.backgroundColor == "lightsteelblue"){
                 return
             }else{
                 let elemento = document.getElementById(idStringfy(linha, coluna));
-                elemento.style = "background-color:red;";
+                elemento.style = "background-color:LightSteelBlue;";
                 elemento.innerHTML = ("<p>" + celula + "</p>");
             }
-            
-            
+     
             
             tabuleiro.celulasAbertas++;
+            console.log("clique: "+tabuleiro.celulasAbertas);       
             if(tabuleiro.celulasAbertas==tabuleiro.celulasSb){
                 fimDeJogo("V");
             }
@@ -62,32 +64,35 @@ function celulasZero(tabuleiro, linha, coluna){
         for(let linhas=linha-1; linhas <= (linha+1); linhas++){
             if(colunas >= 0 && linhas >= 0 && colunas < tabuleiro.numeroCelulas && linhas < tabuleiro.numeroCelulas){
                 if(tabuleiro.matriz[linhas][colunas]===0){
-                    // console.log("colunas"+colunas);
+                    console.log("recursiva: "+tabuleiro.celulasAbertas);
+                    console.log("linha/coluna: "+linhas+"|"+colunas);
                     // console.log("linhas"+linhas);
                     // console.log("-------------------------");
-                    
-                    document.getElementById(idStringfy(linhas, colunas)).style = "background-color:red;";
-                    
                     tabuleiro.matriz[linhas][colunas]=-1;
+                    document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
+                    
+
                     //mostra a casa e chama a função novamente
                     //bloqueia no html pra nao clicar mais ---> style.pointerEvents = 'none';
                     tabuleiro.celulasAbertas++;
                     celulasZero(tabuleiro, linhas, colunas); //rodando de novo para abrir todas que são 0 em volta
                 }
                 else if(tabuleiro.matriz[linhas][colunas]=="B"){
-                    tabuleiro.celulasAbertas++;
+                    // tabuleiro.celulasAbertas++;
                     return "B"; //mostra célula fechada
                 }
                 else {
-                    document.getElementById(idStringfy(linhas, colunas)).style = "background-color:red;";
 
-                    if(tabuleiro.matriz[linhas][colunas] > 0)
+                    if(tabuleiro.matriz[linhas][colunas] > 0 && document.getElementById(idStringfy(linhas, colunas)).style.backgroundColor != "lightsteelblue")
                         {
+                            document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
                             let elemento = document.getElementById(idStringfy(linhas, colunas));
                             elemento.innerHTML = ("<p>" + tabuleiro.matriz[linhas][colunas] + "</p>");
-                            
+                            console.log("normal: "+tabuleiro.celulasAbertas);
+                            console.log("linha/coluna: "+linhas+"|"+colunas);
+                            tabuleiro.celulasAbertas++;
                         }
-                    tabuleiro.celulasAbertas++;
+
                     //mostra o valor e para
                     //bloqueia pra nao clicar mais
                 }
@@ -100,7 +105,6 @@ function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir di
     //bloquear tudo pra não clicar
     //tornar display de "vitória" ou "derrota" visível
     if(resultado=="D"){
-        window.alert("PERDEU OTARIO");
         derrotaGUIEvent();
         //display DIV de derrota
     }
@@ -196,21 +200,26 @@ function trapaca(){
     for(let i=0; i < matriz.length; i++){
         for(let j=0; j < matriz[0].length; j++){
            if(matriz[i][j] == "B"){
-                document.getElementById(idStringfy(i, j)).style = "background-color:blue;";
+                document.getElementById(idStringfy(i, j)).style = "background-color:red;";
+                document.getElementById(idStringfy(i, j)).innerHTML = ("<img id='bombastrapaca' src='../../../View/shared/imgs/Bomba/bomba.ico'>");
+            }
         }
-    }
     }
 
     setTimeout(()=>{
         for(let i=0; i < matriz.length; i++){
             for(let j=0; j < matriz[0].length; j++){
                if(matriz[i][j] == "B"){
-                    document.getElementById(idStringfy(i, j)).style = "background-color:yellow;";
-            }
+                    document.getElementById(idStringfy(i, j)).style = "background-color:white;";
+                    document.getElementById(idStringfy(i, j)).innerHTML = "";
+                }
         }
         }
     }, 3000);
 }
+
+
+
 
 function derrotaGUIEvent(){
     let tabuleiroGUI = document.querySelector("#container-principal section");
