@@ -179,7 +179,6 @@ function trapaca(){
 
 function fimDeJogoGUIEvent(resultado){
     
-    
     var titulo = resultado == 0 ? "FIM DE JOGO" : "VITORIA!!";
 
     let tabuleiroGUI = document.querySelector("#container-principal section");
