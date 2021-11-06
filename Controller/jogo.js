@@ -2,7 +2,7 @@
 
 var tabuleiro = sessionStorage.getItem("tabuleiro");
     tabuleiro = JSON.parse(tabuleiro);
-    console.log(tabuleiro)
+    // //console.log(tabuleiro)
 
 // export class Tabuleiro {Tabuleiro}
 
@@ -27,7 +27,7 @@ function clique(tabuleiro, linha, coluna){
             if(tabuleiro.celulasAbertas==tabuleiro.celulasSb){
                 fimDeJogo("V");
             }
-             console.log("clique: "+tabuleiro.celulasAbertas);
+            //  //console.log("clique: "+tabuleiro.celulasAbertas);
             break;
 
         case "B": //se a célula tiver bomba (nela)
@@ -47,14 +47,14 @@ function clique(tabuleiro, linha, coluna){
      
             
             tabuleiro.celulasAbertas++;
-            console.log("clique: "+tabuleiro.celulasAbertas);       
+            //console.log("clique: "+tabuleiro.celulasAbertas);       
             if(tabuleiro.celulasAbertas==tabuleiro.celulasSb){
                 fimDeJogo("V");
             }
             break;
     }
 
-    console.log(tabuleiro.matriz)
+    //console.log(tabuleiro.matriz)
 
 }
 
@@ -64,10 +64,10 @@ function celulasZero(tabuleiro, linha, coluna){
         for(let linhas=linha-1; linhas <= (linha+1); linhas++){
             if(colunas >= 0 && linhas >= 0 && colunas < tabuleiro.numeroCelulas && linhas < tabuleiro.numeroCelulas){
                 if(tabuleiro.matriz[linhas][colunas]===0){
-                    console.log("recursiva: "+tabuleiro.celulasAbertas);
-                    console.log("linha/coluna: "+linhas+"|"+colunas);
-                    // console.log("linhas"+linhas);
-                    // console.log("-------------------------");
+                    //console.log("recursiva: "+tabuleiro.celulasAbertas);
+                    //console.log("linha/coluna: "+linhas+"|"+colunas);
+                    // //console.log("linhas"+linhas);
+                    // //console.log("-------------------------");
                     tabuleiro.matriz[linhas][colunas]=-1;
                     document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
                     
@@ -88,8 +88,8 @@ function celulasZero(tabuleiro, linha, coluna){
                             document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
                             let elemento = document.getElementById(idStringfy(linhas, colunas));
                             elemento.innerHTML = ("<p>" + tabuleiro.matriz[linhas][colunas] + "</p>");
-                            console.log("normal: "+tabuleiro.celulasAbertas);
-                            console.log("linha/coluna: "+linhas+"|"+colunas);
+                            //console.log("normal: "+tabuleiro.celulasAbertas);
+                            //console.log("linha/coluna: "+linhas+"|"+colunas);
                             tabuleiro.celulasAbertas++;
                         }
 
@@ -105,11 +105,12 @@ function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir di
     //bloquear tudo pra não clicar
     //tornar display de "vitória" ou "derrota" visível
     if(resultado=="D"){
-        derrotaGUIEvent();
+        // clearTimeout(interval);
+        fimDeJogoGUIEvent(0);
         //display DIV de derrota
     }
     else {
-        window.alert("GANHOU CREMOSO");
+        fimDeJogoGUIEvent(1);
         //display DIV de vitória
     }
 }
@@ -143,7 +144,7 @@ function idParse(idElement){
 //VIEW   
 function buildGridLayout(){
 
-    console.log(tabuleiro.matriz)
+    //console.log(tabuleiro.matriz)
 
     let matriz = tabuleiro.matriz;
 
@@ -221,7 +222,11 @@ function trapaca(){
 
 
 
-function derrotaGUIEvent(){
+function fimDeJogoGUIEvent(resultado){
+    
+    
+    var titulo = resultado == 0 ? "FIM DE JOGO" : "VITORIA!";
+
     let tabuleiroGUI = document.querySelector("#container-principal section");
     let overlayTela = document.createElement("div");
     overlayTela.style = ("width: "+ (tabuleiroGUI.getBoundingClientRect().width - 60) + "px; height: "+ (tabuleiroGUI.getBoundingClientRect().height - 60) +"px; background-color: white; position:absolute; index: 400; display: flex; flex-direction: column; align-items: center; justify-content: space-around;");
@@ -233,20 +238,13 @@ function derrotaGUIEvent(){
     // overlayTela.appendChild(overlayTela);
 
     var textoFimDeJogo = document.createElement("h1");
-    textoFimDeJogo.innerText = "FIM DE JOGO!";
+    textoFimDeJogo.innerText = titulo;
     textoFimDeJogo.style = "color: var(--velvet)";
     overlayTela.appendChild(textoFimDeJogo);
 
-    var divTempPontos = document.createElement("div");
-    divTempPontos.style = "display: flex; flex-direction: column; align-items: center; justify-content: space-around; height: 10em; color: black;";
-    overlayTela.appendChild(divTempPontos);
-
-    var tempoFinal = document.createElement("h2");
-    tempoFinal.innerText = "00:00";
-    divTempPontos.appendChild(tempoFinal);
     var pontuacao = document.createElement("h3");
-    pontuacao.innerText = ("PONTUACAO: " + 3);
-    divTempPontos.appendChild(pontuacao);
+    pontuacao.innerText = ("PONTUACAO: " + calcularPontuacao());
+    overlayTela.appendChild(pontuacao);
 
     var divButtons = document.createElement("div");
     divButtons.style = "display: flex; flex-direction: column; justify-content: space-around; align-items: center; height: 15em;";
@@ -269,18 +267,80 @@ function derrotaGUIEvent(){
     sairBtn.addEventListener("click", ()=> document.location.href = "../../screens/configuracoes/configs.html");
     divButtons.appendChild(sairBtn);
 
+    clearTimeout(interval);
+
 }
 
-function startTimer(duracao, display){
-    var timer = duracao;
+function stringifyTime(minutos, segundos){
+
+    minutos = minutos < 10 ? "0" + minutos : minutos;
+    segundos = segundos < 10 ? "0" + segundos : segundos;
+
+    return (minutos + ":" + segundos);
+
+}
+
+function formatMinSeg(tempo){
+    var minutos = parseInt(tabuleiro.tempo / 60, 10);
+    var segundos = parseInt(tabuleiro.tempo % 60, 10);
+
+    return {minutos, segundos};
+}
+
+var interval;
+var tempoOriginal = tabuleiro.tempo;
+
+function startTimer(display){
     var minutos;
     var segundos;
 
-    setInterval(()=>{
-        minutos = parseInt(timer / 60, 10);
-        segundos = parseInt(minutos % 60, 10);
+    if(tabuleiro.modoJogo == "classico"){
 
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-    })
+        interval = setInterval(()=>{
+        
+            ({ minutos, segundos } = formatMinSeg(tabuleiro.tempo));
+    
+            display.innerText = stringifyTime(minutos, segundos);
+                tabuleiro.tempo++;
+    
+        }, 1000);
+
+    }else{
+
+        interval = setInterval(()=>{
+        
+            ({ minutos, segundos } = formatMinSeg(tabuleiro.tempo));
+    
+            display.innerText = stringifyTime(minutos, segundos);
+    
+            if(--tabuleiro.tempo < 0){
+                tabuleiro.tempo = tabuleiro.tempo;
+            }
+    
+            if(tabuleiro.tempo < 0){
+                
+                fimDeJogoGUIEvent(0);
+            }
+    
+        }, 1000);
+
+    }
+
+    
+}
+
+function calcularPontuacao(){
+    let modoJogo = tabuleiro.modoJogo;
+    let qtdBombas = tabuleiro.numeroBombas;
+    let tamanho = tabuleiro.numeroCelulas;
+    let segundosGastos = tempoOriginal - tabuleiro.tempo;
+
+    let pontuacao = 0;
+
+    if(tabuleiro.celulasAbertas == 0)
+        return pontuacao;
+
+    pontuacao = modoJogo == "classico" ? 1000/((tamanho*tamanho)/qtdBombas) : (1000/((tamanho * tamanho)/qtdBombas) * 1.5) - segundosGastos*1.1;
+
+    return pontuacao;
 }

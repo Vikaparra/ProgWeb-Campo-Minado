@@ -18,7 +18,7 @@
 
             <p>MODO DE JOGO:</p>
             <select id="modo_jogo">
-                <option>SELECIONE</option>
+                <option value="selecione">SELECIONE</option>
                 <option value="classico">CLASSICO</option>
                 <option value="rivotril">RIVOTRIL</option>
             </select>
@@ -29,7 +29,7 @@
             </div>
             <p>NUMERO DE BOMBAS:</p>
             <div class="slidecontainer">
-                <input type="range" min="1" max="99" value="50" class="slider" id="myRange" onchange="bombvalue.value=value">
+                <input type="range" min="1" max="99" class="slider" id="myRange" onchange="bombvalue.value=value">
                 <output class="rangevalue" id="bombvalue">50</output>
             </div>
             <div>

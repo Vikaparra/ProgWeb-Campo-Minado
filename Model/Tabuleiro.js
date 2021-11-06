@@ -12,16 +12,15 @@ class Tabuleiro{
     constructor(numeroCelulas, numeroBombas, modoJogo){
         if(numeroCelulas > 20 || numeroCelulas < 5){
             window.alert("Insira um número de células entre 5 e 20");
-            return;
+            return 0;
         }else{
             this.numeroCelulas = numeroCelulas;
         }
 
-        let limiteBombas = (numeroCelulas*numeroCelulas*30)/100;
+        let limiteBombas = Math.floor((numeroCelulas*numeroCelulas*30)/100);
         if(numeroBombas > limiteBombas || numeroBombas < 1){
             window.alert("Insira um número de bombas entre 1 e " + limiteBombas);
-            return;
-            
+            return 0;
         }else{
             this.numeroBombas = numeroBombas;
         }
@@ -38,13 +37,13 @@ class Tabuleiro{
 
         if(modoJogo == "selecione"){
             window.alert("selecione um modo de jogo");
-            return;
+            return 0;
         }else{
             this.modoJogo = modoJogo;
             if(this.modoJogo == "rivotril"){
                 this.tempo = 15*numeroBombas;
             }else{
-                this.tempo = null;
+                this.tempo = 0;
             }
         }
 
@@ -80,13 +79,13 @@ class Tabuleiro{
     }
 
     printMatriz(){
-        console.log(this.matriz)
+        //console.log(this.matriz)
     }
 
     verificar(linha, coluna){
     
 
-        console.log("aoooba")
+        //console.log("aoooba")
         var numeroBombasEncontradas = 0;
     
         if(this.matriz[linha][coluna] == "B"){
