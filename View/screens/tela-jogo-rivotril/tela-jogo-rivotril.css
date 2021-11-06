@@ -112,32 +112,23 @@ aside>button:last-child {
     background-color: #804000;
     border          : 4px solid var(--sand);
     width           : 100%;
-    height          : 30em;
+    height          : 23em;
     display         : flex;
     flex-direction  : column;
     justify-content : space-evenly;
+    row-gap: 0.5em;
     align-items     : center;
 }
 
-#titulo-config {
-    padding: 1vw;
-}
-
 #info-jogo p {
-    color    : var(--white);
-    font-size: var(--body);
-    line-height: 3em;
+    color      : var(--white);
+    font-size  : 13px;
+    line-height: 2em;
 }
-
 
 h1 {
     color      : var(--white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.general-button {
-    margin-bottom: 2em;
-    height       : 4.5em;
 }
 
 #bombastrapaca{
@@ -145,4 +136,11 @@ h1 {
     max-height: 75%;
     min-width: 60%;
     min-height: 60%;
+}
+
+#sair-rivotril{
+    min-height: 1px;
+    font-size: 13px;
+    width: 10em;
+    height: 5em;
 }

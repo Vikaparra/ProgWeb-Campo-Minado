@@ -66,9 +66,9 @@ section {
     color: var(--velvet);
 }
 
-.general-button {
+/* .general-button {
     height: 4.5em;
-}
+} */
 
 aside {
     max-height     : 100vh;
@@ -116,18 +116,19 @@ aside>button:last-child {
     background-color: #804000;
     border          : 4px solid var(--sand);
     width           : 100%;
-    height          : 26em;
+    height          : 23em;
     display         : flex;
     flex-direction  : column;
     justify-content : space-evenly;
+    row-gap: 0.5em;
     align-items     : center;
 }
 
 
 #info-jogo p {
     color      : var(--white);
-    font-size  : 15px;
-    line-height: 3em;
+    font-size  : 13px;
+    line-height: 2em;
 }
 
 h1 {
@@ -151,8 +152,9 @@ h1 {
     min-height: 60%;
 }
 
-#botao-sair-rivotril{
-    font-size: 15px;
-    width: 100%;
-    height: 0.1em;
+#sair-classico{
+    min-height: 1px;
+    font-size: 13px;
+    width: 10em;
+    height: 5em;
 }
