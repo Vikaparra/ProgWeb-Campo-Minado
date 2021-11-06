@@ -29,7 +29,6 @@ botaoEnviar.addEventListener("click", ()=>{
     }
     else if(valorModoDeJogo == "classico" && JSON.stringify(tabuleiro) != "{}"){
         document.location.href = ("../tela-jogo-classico/tela-jogo-classico.html");
-        //console.log("errado classico")
         let jsonTabuleiro = JSON.stringify(tabuleiro);
         sessionStorage.setItem("tabuleiro", jsonTabuleiro);
         

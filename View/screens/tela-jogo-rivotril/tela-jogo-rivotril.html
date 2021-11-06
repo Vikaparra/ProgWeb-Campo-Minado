@@ -20,24 +20,9 @@
             <div id="title-usu">
                 <b>AHOY, USUARIO</b>
             </div>
-            <!-- <div id="text-final">
-                <h1>FIM DE JOGO !</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h2>00:00</h2>
-                <h3>PONTUACAO 3</h3>
-                <br/>
-                <br/>
-                <br/>
-                <button id="jogar_novamente_rivotril" class="general-button">JOGAR DE NOVO</button>
-                <br/>
-                <button id="sair_rivotril" class="general-button">SAIR</button>
-            </div> -->
         </section>
         <aside>
-            <p>RIVOTRIL &nbsp;&nbsp; RIVOTRIL</p>
-
+            <!-- <p>RIVOTRIL &nbsp;&nbsp; RIVOTRIL</p> -->
             <div id="time">
                 <div class="time-item1">
                     <h1>TEMPO</h1>
@@ -46,51 +31,24 @@
                     <h1 id="tempo"></h1>
                 </div>
             </div>
-
             <div id="config-jogo">
-
                 <div id="titulo-config">
                     <h1>CONFIGURACOES DE JOGO </h1>
                 </div>
-
-
                 <div id="info-jogo">
-                 
-                        <p id="numero-bombas"></p>
-
-                        <p id="grid"></p>
-
-                        <!-- <p>Tempo padrao: 12min</p> -->
-                 
+                    <p id="numero-bombas"></p>
+                    <p id="grid"></p>
+                    <p id="celulas-abertas">Celulas Abertas: 0</p>
                 </div>
-
-
                 <div id="botao-config"><button id="configs_rivotril" class="general-button">ALTERAR CONFIGURACOES</button>
-                    <button id="configs_rivotril" class="general-button">SAIR</button>
+                    <button id="sair-rivotril" class="general-button">SAIR</button>
                 </div>
-
             </div>
 
             <button id="trapaca" class="general-button">TRAPACA</button>
         </aside>
     </div>
 
-
-    <!-- <script>
-        document.getElementById("jogar_novamente_rivotril").onclick = function() {
-            location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
-        };
-    </script>
-    <script>
-        document.getElementById("sair_rivotril").onclick = function() {
-            location.href = ("../tela_menu_principal/tela_menu_principal.html");
-        };
-    </script>
-    <script>
-        document.getElementById("configs_rivotril").onclick = function() {
-            location.href = ("../configuracoes/configs.html");
-        };
-    </script> -->
     <script src="../../../Model/Tabuleiro.js"></script>
     <script src="../../../Controller/jogo.js"></script>
     <script src="../../Shared/assets/telaJogo.js"></script>

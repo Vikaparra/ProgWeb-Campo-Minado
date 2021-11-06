@@ -1,7 +1,4 @@
 "use strict";
-
-// export class Tabuleiro {Tabuleiro}
-
 class Tabuleiro{
 
     /*
@@ -67,25 +64,13 @@ class Tabuleiro{
             if(this.matriz[linha][coluna] == 0){
                 this.matriz[linha][coluna] = "B";
                 numBombas++;
-                //talvez ja fazer uma função pra ja somar 1 nos espaços em volta aqui
-                //vai ficar mais eficiente
-                // !!!!!!!!!!
-                // !!!!!!!!!!
-                // !!!!!!!!!!
-                // le ali em cima
             }
         }
         this.printMatriz();
     }
 
-    printMatriz(){
-        //console.log(this.matriz)
-    }
-
     verificar(linha, coluna){
-    
 
-        //console.log("aoooba")
         var numeroBombasEncontradas = 0;
     
         if(this.matriz[linha][coluna] == "B"){
@@ -112,6 +97,10 @@ class Tabuleiro{
             this.matriz[linha][coluna] = this.verificar(linha, coluna);        
         }
     }
+}
+
+printMatriz(){
+    console.log(this.matriz);
 }
 
 }

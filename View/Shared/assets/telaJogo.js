@@ -1,13 +1,9 @@
 var tabuleiro = sessionStorage.getItem("tabuleiro");
     tabuleiro = JSON.parse(tabuleiro);
 
-// //console.log(tabuleiro.tempo)
+var tempo = document.getElementById("tempo");
 
-    var tempo = document.getElementById("tempo");
-
-    startTimer(tempo);
-
-
+startTimer(tempo);
 
 var bombas = document.getElementById("numero-bombas");
 bombas.innerText = ("Numero de Bombas: " + tabuleiro.numeroBombas);
@@ -24,3 +20,4 @@ var trapacaBtn = document.getElementById("trapaca");
 trapacaBtn.addEventListener("click", ()=>{
     trapaca();
 });
+
