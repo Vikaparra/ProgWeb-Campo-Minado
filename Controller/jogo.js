@@ -121,7 +121,6 @@ function idParse(idElement){
 //VIEW   
 function buildGridLayout(){
 
-
     let matriz = tabuleiro.matriz;
 
     var divMatriz = document.querySelector("#container-principal section");
@@ -144,7 +143,6 @@ function buildGridLayout(){
             let { linha, coluna } = idParse(celulaMatrizGUI.id);
             celulaMatrizGUI.addEventListener("click", function(){clique(tabuleiro, linha, coluna)}) ;
             
-         
             matrizGUI.appendChild(celulaMatrizGUI);
         });
         colunaM = -1;

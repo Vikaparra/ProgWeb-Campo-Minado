@@ -48,12 +48,12 @@ class Tabuleiro{
         this.celulasSb = (numeroCelulas*numeroCelulas) - numeroBombas;
         this.matriz = matriz;
         
-        this.inserirBomas(numeroCelulas, numeroBombas);
+        this.inserirBombas(numeroCelulas, numeroBombas);
         this.preencherNumeros();
         
     };
 
-    inserirBomas(numeroCelulas, numeroBombas) {
+    inserirBombas(numeroCelulas, numeroBombas) {
 
         var numBombas = 0;
 
@@ -90,8 +90,7 @@ class Tabuleiro{
     }
 
     //Função para preencher o this com numeros das bombas em volta
-    preencherNumeros(){
-        
+    preencherNumeros(){        
     for (let coluna = 0; coluna < this.numeroCelulas; coluna++) {
         for (let linha = 0; linha < this.numeroCelulas; linha++) {
             this.matriz[linha][coluna] = this.verificar(linha, coluna);        
