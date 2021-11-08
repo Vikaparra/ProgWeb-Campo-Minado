@@ -3,7 +3,7 @@
 var tabuleiro = sessionStorage.getItem("tabuleiro");
     tabuleiro = JSON.parse(tabuleiro);
 
-    //Função para verificar a celula no momento do clique
+//Função para verificar a celula no momento do clique
 function clique(tabuleiro, linha, coluna){
 
     let celula = tabuleiro.matriz[linha][coluna];
@@ -23,19 +23,16 @@ function clique(tabuleiro, linha, coluna){
             break;
 
         default: //se a célula tiver bombas (perto)
-            //so mostra normalmente o valor
-            //bloqueia no html pra nao poder clicar mais
-            if(document.getElementById(idStringfy(linha, coluna)).style.backgroundColor == "lightsteelblue"){
+            //mostra normalmente o valor e bloqueia no html para nao poder clicar mais
+            if(document.getElementById(idStringfy(linha, coluna)).style.backgroundColor == "lightsteelblue"){ //verifica se ja foi clicada
                 return
             }else{
                 let elemento = document.getElementById(idStringfy(linha, coluna));
                 elemento.style = "background-color:LightSteelBlue;";
                 elemento.innerHTML = ("<p>" + celula + "</p>");
             }
-     
-            
             tabuleiro.celulasAbertas++;  
-            numCelulasAbertasGUI.innerText = ("Celulas Abertas: " + tabuleiro.celulasAbertas);    
+            numCelulasAbertasGUI.innerText = ("Celulas Abertas: " + tabuleiro.celulasAbertas); //mostra no tabuleiro 
             if(tabuleiro.celulasAbertas==tabuleiro.celulasSb){
                 fimDeJogo("V");
             }
@@ -52,30 +49,25 @@ function celulasZero(tabuleiro, linha, coluna){
             if(colunas >= 0 && linhas >= 0 && colunas < tabuleiro.numeroCelulas && linhas < tabuleiro.numeroCelulas){
                 if(tabuleiro.matriz[linhas][colunas]===0){
                     tabuleiro.matriz[linhas][colunas]=-1;
+                    //mostra a casa como clicada e chama a função novamente
                     document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
-                    
 
-                    //mostra a casa e chama a função novamente
-                    //bloqueia no html pra nao clicar mais ---> style.pointerEvents = 'none';
                     tabuleiro.celulasAbertas++;
+
                     celulasZero(tabuleiro, linhas, colunas); //rodando de novo para abrir todas que são 0 em volta
                 }
                 else if(tabuleiro.matriz[linhas][colunas]=="B"){
-                    return "B"; //mostra célula fechada
+                    return "B"; //célula permanece fechada
                 }
                 else {
-
-                    if(tabuleiro.matriz[linhas][colunas] > 0 && document.getElementById(idStringfy(linhas, colunas)).style.backgroundColor != "lightsteelblue")
-                        {
+                    if(tabuleiro.matriz[linhas][colunas] > 0 && document.getElementById(idStringfy(linhas, colunas)).style.backgroundColor != "lightsteelblue"){
+                            //mostra o valor e para  
                             document.getElementById(idStringfy(linhas, colunas)).style = "background-color:lightsteelblue;";
                             let elemento = document.getElementById(idStringfy(linhas, colunas));
                             elemento.innerHTML = ("<p>" + tabuleiro.matriz[linhas][colunas] + "</p>");
                             
                             tabuleiro.celulasAbertas++;
                         }
-
-                    //mostra o valor e para
-                    //bloqueia pra nao clicar mais
                 }
             }  
         }
@@ -83,8 +75,6 @@ function celulasZero(tabuleiro, linha, coluna){
 }
 
 function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir display
-    //bloquear tudo pra não clicar
-    //tornar display de "vitória" ou "derrota" visível
     if(resultado=="D"){
         fimDeJogoGUIEvent(0);
         //display DIV de derrota
