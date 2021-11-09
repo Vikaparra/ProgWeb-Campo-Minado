@@ -18,12 +18,15 @@
 
 .column {
     flex-direction: column;
+    line-height: 1;
+    align-self: flex-end;
 }
 
 .displayflex {
     flex         : 1;
     display      : flex;
     align-content: flex-start;
+    /* padding-top: 5px; */
 }
 
 .row {
@@ -89,4 +92,5 @@ span {
 
 #campo_username_perfil {
     width: 90%;
+    /* margin-top: 5px; */
 }

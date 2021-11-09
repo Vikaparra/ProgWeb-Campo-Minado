@@ -20,34 +20,32 @@ body {
 }
 
 section {
-    display            : flex;
-    padding            : 20px;
-    padding-top        : 0px;
-    margin-right       : 20px;
-    width              : 45vw;
-    height             : 90vh;
-    background-color   : white;
-    align-self         : center;
-    border             : 10px solid #CC983D;
-    box-sizing         : border-box;
-    box-shadow         : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius      : 20px;
-    flex-direction     : column;
-    align-items        : center;
-    background-image   : url(../../shared/imgs/BG/fundo_tela_jogo_grid.jpg);
-    background-position: center;
-    background-size    : 80%;
-    background-repeat  : no-repeat;
-
+    display         : flex;
+    padding         : 20px;
+    margin-right    : 20px;
+    width           : 45vw;
+    max-height      : 90vh;
+    background-color: white;
+    border          : 10px solid #CC983D;
+    box-sizing      : border-box;
+    box-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius   : 20px;
+    align-items     : center;
+    justify-content : center;
 }
 
 #title-usu {
+    position        : absolute;
     text-align      : center;
+    border-radius   : 5px;
+    padding         : 0.5em;
     background-color: var(--sand);
     min-width       : 20em;
-    width           : auto;
-    height          : 1.5em;
+    max-width       : 30em;
     font-size       : var(--body);
+    top             : 1em;
+    text-shadow     : 3px 6px 5px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.25);
+    filter          : drop-shadow(1px 6px 5px rgba(0, 0, 0, 0.10));
 }
 
 #text-final {
@@ -68,18 +66,15 @@ section {
     color: var(--velvet);
 }
 
-.general-button {
-    margin-bottom: 2em;
-    height       : 4.5em;
-}
-
 aside {
-    height        : 100vh;
-    width         : 25vw;
-    text-align    : center;
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
+    max-height     : 100vh;
+    width          : 25vw;
+    text-align     : center;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    row-gap        : 2em;
+    align-items    : center;
 }
 
 aside>p {
@@ -90,17 +85,20 @@ aside>p {
 aside>button:last-child {
     background-color: var(--velvet);
     height          : 4em;
+    margin-bottom: 10px;
 }
 
 #time {
     background-color: #804000;
     border          : 4px solid var(--sand);
-    width           : 25vw;
-    height          : 7vh;
+    width           : 100%;
+    height          : 5%;
     display         : flex;
     flex-wrap       : nowrap;
     align-items     : center;
+    padding         : 0.8em 0;
 }
+
 
 .time-item2 h1 {
     color: var(--sand);
@@ -114,25 +112,47 @@ aside>button:last-child {
 #config-jogo {
     background-color: #804000;
     border          : 4px solid var(--sand);
-    width           : 25vw;
-    height          : 55vh;
-
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
+    width           : 100%;
+    height          : 23em;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-evenly;
+    row-gap: 0.5em;
+    align-items     : center;
 }
 
-#titulo-config {
-    padding: 1vw;
-}
 
 #info-jogo p {
-    color    : var(--white);
-    font-size: var(--body);
+    color      : var(--white);
+    font-size  : 13px;
+    line-height: 2em;
 }
 
 h1 {
     color      : var(--white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#classico {
+    top         : 2em;
+    margin-left : auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color       : white;
+    width       : 25vw;
+    
+}
+
+#bombastrapaca{
+    max-width: 65%;
+    max-height: 75%;
+    min-width: 60%;
+    min-height: 60%;
+}
+
+#sair-classico{
+    min-height: 1px;
+    font-size: 13px;
+    width: 10em;
+    height: 5em;
 }

@@ -14,32 +14,31 @@
 
 <body>
     <div class="container">
-        <div class="box column">
+        <div class="box">
 
-            <p>modo de jogo:</p>
+            <p>MODO DE JOGO:</p>
             <select id="modo_jogo">
-                <option>selecione</option>
-                <option value="classico">classico</option>
-                <option value="rivotril">rivotril</option>
+                <option value="selecione">SELECIONE</option>
+                <option value="classico">CLASSICO</option>
+                <option value="rivotril">RIVOTRIL</option>
             </select>
-            <p>tamanho da grade:</p>
+            <p>TAMANHO DA GRADE:</p>
             <div class="slidecontainer">
-                <input type="number" class="inputcontainer" id="quantity" name="quantity" min="1" max="100" onchange="gridvalue.value=value; gridvalue2.value=value">
-                <p id="gridtext"><output id="gridvalue">50</output> x<output class="rangevalue" id="gridvalue2">50</output></p>
+                <input type="number" class="inputcontainer" id="quantity" name="quantity" min="1" max="20" onchange="gridvalue.value=value; gridvalue2.value=value; onchangeQtdCelulas()">
+                <p id="gridtext"><output id="gridvalue">0</output> x<output class="rangevalue" id="gridvalue2">0</output></p>
             </div>
-            <p>numero de bombas:</p>
+            <p>NUMERO DE BOMBAS:</p>
             <div class="slidecontainer">
-                <input type="range" min="1" max="99" value="50" class="slider" id="myRange" onchange="bombvalue.value=value">
+                <input type="range" min="1" max="99" class="slider" id="myRange" onchange="bombvalue.value=value">
                 <output class="rangevalue" id="bombvalue">50</output>
             </div>
             <div>
                 <button id="jogar_configs" class="general-button general-button-play" type="submit">
-                        jogar!
+                        JOGAR!
                     </button>
             </div>
-            <p>tempo: 00:00</p>
 
-            <a href="../tela_menu_principal/tela_menu_principal.html">
+            <a href="javascript:history.back()">
                 <div class="div-button-voltar">
                     <img id="retornar" src="../../shared/imgs/icones/return3.png" alt="Icone de retornar para pagina anterior">
                 </div>
@@ -47,17 +46,8 @@
         </div>
     </div>
 
-
-    <script>
-        document.getElementById("jogar_configs").onclick = function() {
-            if(modo_jogo.value == "rivotril"){
-                location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
-            }
-            else{
-                location.href = ("../tela-jogo-classico/tela-jogo-classico.html");
-            }
-        };
-    </script>
+    <script src="../../../Model/Tabuleiro.js"></script>
+    <script src="./configuracoes.js"></script>
 </body>
 
 </html>

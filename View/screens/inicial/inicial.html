@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../shared/assets/button.css">
     <link rel="stylesheet" href="inicial.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <script src="/Model/Tabuleiro.js"></script>
+    <script src="/Controller/jogo.js"></script>
     <title>Início</title>
 </head>
 
@@ -17,22 +19,18 @@
         <div class="div-buttons">
             <div>
                 <button id="login_inicial" class="general-button" type="submit">
-                    entrar
+                    ENTRAR
                 </button>
             </div>
             <div>
                 <button id="cadastro_inicial" class="general-button" type="submit">
-                    cadastre-se
+                    CADASTRE-SE
                 </button>
             </div>
 
         </div>
     </div>
 
-
-    <!-- estamos utilizando javascript para nossas tags de button, 
-        ainda não tivemos aula sobre esse tema mas foi permitido 
-        pelo prof usar JS nesse caso -->
     <script>
         document.getElementById("login_inicial").onclick = function() {
             location.href = ("../login/login.html");

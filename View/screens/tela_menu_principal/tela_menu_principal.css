@@ -19,6 +19,7 @@
 .side-menu {
     display       : flex;
     flex-direction: column;
+    max-height: 85vh;
     padding       : 2em 1.5em 0.5em 1.5em;
     background    : linear-gradient(rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
@@ -37,7 +38,6 @@
 }
 
 .div-buttons-right {
-    margin-top     : 0.5em;
     min-height     : 16em;
     display        : flex;
     flex-direction : column;
@@ -47,6 +47,7 @@
 .pirate-name {
     text-align: center;
     color     : white;
+    padding: 0.2em 0;
 }
 
 .general-button {
@@ -54,10 +55,10 @@
 }
 
 .pirata-img {
-    /* margin-top: ; */
     border-radius: 50%;
     height       : 10em;
     border       : 0.5em solid var(--sand);
+    /* margin: 0 auto 0.3em auto */
 }
 
 .button-jogar {
@@ -70,7 +71,7 @@
 h3 {
     font-size    : var(--header1);
     color        : white;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.4em;
 }
 
 span {
@@ -87,4 +88,8 @@ span img {
 
 .button-vermelho {
     color: var(--velvet);
+}
+
+#divimagem {
+    text-align: center;
 }

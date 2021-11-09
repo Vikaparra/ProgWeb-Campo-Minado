@@ -8,99 +8,54 @@
     <link rel="stylesheet" href="../../shared/assets/button.css">
     <link rel="stylesheet" href="../../shared/assets/normalize.css">
     <link rel="stylesheet" href="tela-jogo-rivotril.css">
+    <link rel="stylesheet" href="../../Shared/assets/matrizGUI.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
     <title>Campo Minado - Rivotril</title>
 </head>
 
-<body>
+<body onload="buildGridLayout()">
 
     <div id="container-principal" class="container">
         <section>
             <div id="title-usu">
                 <b>AHOY, USUARIO</b>
             </div>
-            <div id="text-final">
-                <h1>FIM DE JOGO !</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h2>00:00</h2>
-                <h3>PONTUACAO 3</h3>
-                <br/>
-                <br/>
-                <br/>
-                <button id="jogar_novamente_rivotril" class="general-button">jogar de novo</button>
-                <br/>
-                <button id="sair_rivotril" class="general-button">sair</button>
-            </div>
         </section>
         <aside>
-            <br/>
-            <p>RIVOTRIL &nbsp;&nbsp; RIVOTRIL</p>
-            <br/>
-            <br/>
+            <div id="rivotril"><p>RIVOTRIL RIVOTRIL</p></div>
+
             <div id="time">
                 <div class="time-item1">
                     <h1>TEMPO</h1>
                 </div>
                 <div class="time-item2">
-                    <h1>00:00</h1>
+                    <h1 id="tempo">00:00</h1>
                 </div>
             </div>
-
-            <br/>
-            <br/>
-
             <div id="config-jogo">
-                <br/>
-
                 <div id="titulo-config">
                     <h1>CONFIGURACOES DE JOGO </h1>
                 </div>
-
-                <br/>
-
                 <div id="info-jogo">
-                    <p>
-                        Numero de bombas: 4
-                        <br/>
-                        <br/> Grid: 7x7
-                        <br/>
-                        <br/> Tempo padrao: 12min
-                    </p>
+                    <p class="numero-bombas"></p>
+                    <p class="grid"></p>
+                    <p id="celulas-abertas">Celulas Abertas: 0</p>
                 </div>
-
-                <br/>
-
-                <div id="botao-config"><button id="configs_rivotril" class="general-button">alterar configuracoes</button>
+                <div >
+                    <button class="general-button botao-config">ALTERAR CONFIGURACOES</button>
                 </div>
-
+                <div>
+                    <button id="sair-rivotril" class="general-button botao-sair-jogo">SAIR</button>
+                </div>
             </div>
 
-
-            <br/>
-            <br/>
-
-            <button class="general-button">trapaca</button>
+            <button id="trapaca" class="general-button">TRAPACA</button>
         </aside>
     </div>
 
-
-    <script>
-        document.getElementById("jogar_novamente_rivotril").onclick = function() {
-            location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
-        };
-    </script>
-    <script>
-        document.getElementById("sair_rivotril").onclick = function() {
-            location.href = ("../tela_menu_principal/tela_menu_principal.html");
-        };
-    </script>
-    <script>
-        document.getElementById("configs_rivotril").onclick = function() {
-            location.href = ("../configuracoes/configs.html");
-        };
-    </script>
+    <script src="../../../Model/Tabuleiro.js"></script>
+    <script src="../../../Controller/jogo.js"></script>
+    <script src="../../Shared/assets/telaJogo.js"></script>
 
 </body>
 
