@@ -30,7 +30,7 @@ try {
             array_push($nomesAvaliados, $partidas[$i]["nome"]);
         }
 
-        if(count($nomesAvaliados)> 10){
+        if(count($nomesAvaliados) > 10){
             break;
         }
     }

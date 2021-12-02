@@ -14,11 +14,10 @@ try {
         UPDATE user 
         SET 
         nome = '".$data["nome"]."',
-        cpf = '".$data["cpf"]."',
         data_nascimento = '".$data["data_nascimento"]."',
         telefone = '".$data["telefone"]."',
         email = '".$data["email"]."',
-        username = '".$data["username"]."'
+        senha = '".$data["senha"]."'
         WHERE id_user = ".$data["id_user"]."
     ");
     
