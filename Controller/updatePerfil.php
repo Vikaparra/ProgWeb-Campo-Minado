@@ -8,10 +8,27 @@ try {
     $conn = new PDO("mysql:host=$serverName;dbname=progweb", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $statement = $conn->query("SELECT * FROM user WHERE id_user = 1");
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    $result = $conn->exec("
+        UPDATE user 
+        SET 
+        nome = '".$data["nome"]."',
+        cpf = '".$data["cpf"]."',
+        data_nascimento = '".$data["data_nascimento"]."',
+        telefone = '".$data["telefone"]."',
+        email = '".$data["email"]."',
+        username = '".$data["username"]."'
+        WHERE id_user = ".$data["id_user"]."
+    ");
     
-    $row = $statement->fetch(PDO::FETCH_ASSOC);
-    echo json_encode($row);      
+    if ($result > 0) {
+        echo json_encode(["result" => 201]);// realizou as mudanças
+    }else{
+        echo json_encode(["result" => 200]); //está ok mas não fez musdanças
+    }
+
+                 
 
 } catch (PDOException $err) {
     echo json_encode(["error" => "conexão falhou: ". $err->getMessage()]);

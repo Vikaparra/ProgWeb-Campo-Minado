@@ -5,76 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../shared/assets/normalize.css">
-    <link rel="stylesheet" href="../shared/assets/button.css">
+    <link rel="stylesheet" href="../../shared/assets/button.css">
+    <link rel="stylesheet" href="../../shared/assets/normalize.css">
+    <link rel="stylesheet" href="./Rankingcss.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
-
-    <link rel="stylesheet" type="text/css" href="Rankingcss.css" />
-    <title>Ranking Global</title>
-
+    <title>Histórico</title>
 </head>
 
-<body class="background">
-    <div class="div-img">
-        <img id="trofeus" src="../../shared/imgs/trofeus/conjunto-de-trofeus-com-estilo-pixel-art_475147-84-removebg-preview.png" alt="Imagem de 3 troféus, um de ouro, um de prata e um de bronze.">
-    </div>
+<body onload="loadData()">
+    <div class="container">
 
-    <h2 class="titulo">RANKING</h2>
+        <div class="div-img">
+            <img id="trofeus" src="../../shared/imgs/trofeus/conjunto-de-trofeus-com-estilo-pixel-art_475147-84-removebg-preview.png" alt="Imagem de 3 troféus, um de ouro, um de prata e um de bronze.">
+        </div>
 
+        <h2 class="titulo">RANKING</h2>
+        <div class="box">
 
-    <div class="box">
-        <table class="tabranking">
-            <tr>
-                <th>USERNAME</th>
-                <th>DADOS DA PARTIDA</th>
-            </tr>
-            <tr class="spaceUnder">
-                <td>nome 1</td>
-                <td>dados 1</td>
-            </tr>
-            <tr>
-                <td>nome 2</td>
-                <td>dados 2</td>
-            </tr>
-            <tr class="spaceUnder">
-                <td>nome 3</td>
-                <td>dados 3</td>
-            </tr>
-            <tr>
-                <td>nome 4</td>
-                <td>dados 4</td>
-            </tr>
-            <tr class="spaceUnder">
-                <td>nome 5</td>
-                <td>dados 5</td>
-            </tr>
-            <tr>
-                <td>nome 6</td>
-                <td>dados 6</td>
-            </tr>
-            <tr class="spaceUnder">
-                <td>nome 7</td>
-                <td>dados 7</td>
-            </tr>
-            <tr>
-                <td>nome 8</td>
-                <td>dados 8</td>
-            </tr>
-            <tr class="spaceUnder">
-                <td>nome 9</td>
-                <td>dados 9</td>
-            </tr>
-            <tr>
-                <td>nome 10</td>
-                <td>dados 10</td>
-            </tr>
-        </table>
-    </div>
+            <table>
+                <tr class="titulos-tabela">
+                    <th>JOGADOR </th>
+                    <th>DIMENSOES </th>
+                    <th>BOMBAS </th>
+                    <th>MODALIDADE </th>
+                    <th>TEMPO</th>
+                    <th>RESULT </th>
+                    <th>DATA/HORA </th>
+                </tr>
+            </table>
+        </div>
 
-    <div>
-        <button id="voltar_ranking" class="general-button" type="button">
-                VOLTAR
-        </button>
+        <div class="botoes">
+            <button id="voltar_ranking" class="general-button" type="button">
+                    VOLTAR
+            </button>
+        </div>
     </div>
 
 
@@ -83,6 +48,8 @@
             location.href = ("../tela_menu_principal/tela_menu_principal.html");
         };
     </script>
+
+    <script src="./tela_de_ranking.js"></script>
 
 </body>
 
