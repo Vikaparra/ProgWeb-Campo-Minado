@@ -38,7 +38,7 @@ function cadastro(id){
     fetch("../../../Controller/cadastro.php", {
         method: "POST",
         body: JSON.stringify({
-            "id_user" : 1,
+            "id_user" : 99,
             "nome" : name.value,
             "data_nascimento" : dataNasc.value,
             "cpf" : cpf.value,
@@ -50,7 +50,7 @@ function cadastro(id){
     })
     .then(response => response.json())
     .then(answer => {
-        if(answer["result"] >= 200){
+        if(answer["result"] > 200){
             window.alert("WOWWW");
 
             location.href = ("../tela_menu_principal/tela_menu_principal.html");
