@@ -15,7 +15,7 @@ function insertDataOnFields(userData){
     var password = document.getElementById("campo_senha_perfil");
     var confirmPassword = document.getElementById("campo_confsenha_perfil");
     
-    name.value = userData.nome; 
+    name.value = userData.nome_user; 
     dataNasc.value = userData.data_nascimento; 
     cpf.value = userData.cpf; 
     telefone.value = userData.telefone; 
@@ -49,12 +49,11 @@ function updateData(id){
         return ;
     }
 
-
     fetch("../../../Controller/updatePerfil.php", {
         method: "POST",
         body: JSON.stringify({
             "id_user" : 1,
-            "nome" : name.value,
+            "nome_user" : name.value,
             "data_nascimento" : dataNasc.value,
             "telefone" : telefone.value,
             "email" : email.value,

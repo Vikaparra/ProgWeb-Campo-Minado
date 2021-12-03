@@ -10,7 +10,7 @@ try {
 
     // $statement = $conn->query("SELECT * FROM partida WHERE resultado=1 ORDER BY dimensoes desc, tempo_gasto asc LIMIT 10");
 
-     $statement = $conn->query("SELECT user.nome, dimensoes, numero_bombas, modalidade, tempo_gasto, resultado, data_hora 
+     $statement = $conn->query("SELECT user.nome_user, dimensoes, numero_bombas, modalidade, tempo_gasto, resultado, data_hora 
      FROM partida INNER JOIN user 
      ON (id_user = id_jogador AND resultado = 1)
      ORDER BY dimensoes desc, tempo_gasto asc");
@@ -25,9 +25,9 @@ try {
     $nomesAvaliados = [];
 
     foreach (array_values($partidas) as $i => $value) {
-        if(!in_array($partidas[$i]["nome"], $nomesAvaliados)){
+        if(!in_array($partidas[$i]["id_user"], $nomesAvaliados)){
             array_push($melhoresPartidas, $partidas[$i]);
-            array_push($nomesAvaliados, $partidas[$i]["nome"]);
+            array_push($nomesAvaliados, $partidas[$i]["id_user"]);
         }
 
         if(count($nomesAvaliados) > 10){
