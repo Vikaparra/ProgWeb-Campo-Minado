@@ -51,6 +51,8 @@ function cadastro(id){
     .then(response => response.json())
     .then(answer => {
         if(answer["result"] >= 200){
+            window.alert("WOWWW");
+
             location.href = ("../tela_menu_principal/tela_menu_principal.html");
         }else{
             window.alert("Um erro ocorreu. Certifique-se de que ja não está cadastrado");
