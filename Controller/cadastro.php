@@ -10,13 +10,13 @@
 
         $data = json_decode(file_get_contents('php://input'), true);
         
-        echo "<script language=’javascript’ type=’text/javascript’>alert(‘wowwwww’);</script>";
+        // echo "<script language=’javascript’ type=’text/javascript’>system.log('ENTROU');</script>";
 
 
         $statement = $conn->query("SELECT * FROM user WHERE id_user = 1");
         $row = $statement->fetch(PDO::FETCH_ASSOC);
         if ($row == ""){
-            echo "<script language=’javascript’ type=’text/javascript’>alert(‘Não foi possível cadastrar esse usuário’);</script>";
+            echo json_encode(["result" => 201]);
         }
         echo json_encode($row); 
 
@@ -33,7 +33,7 @@
         // ");
         
         // if ($result > 0) {
-        //     echo json_encode(["result" => 201]);// realizou as mudanças
+           // echo json_encode(["result" => 201]);// realizou as mudanças
         // }else{
         //     echo json_encode(["result" => 200]); //está ok mas não fez musdanças
         // }
