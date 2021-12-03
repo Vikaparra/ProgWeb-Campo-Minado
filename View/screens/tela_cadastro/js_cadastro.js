@@ -38,7 +38,6 @@ function cadastro(id){
     fetch("../../../Controller/cadastro.php", {
         method: "POST",
         body: JSON.stringify({
-            "id_user" : 99,
             "nome" : name.value,
             "data_nascimento" : dataNasc.value,
             "cpf" : cpf.value,
