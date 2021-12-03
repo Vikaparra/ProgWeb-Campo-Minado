@@ -7,10 +7,8 @@ function loadData(){
 
 function printValues(data){
     var table = document.querySelector("table");
-
-    var partidas = new Set(data);
     
-    partidas.forEach(partida => {
+    data.forEach(partida => {
         let tableRow = document.createElement("tr");
         table.appendChild(tableRow);
         let jogador = document.createElement("td");
@@ -28,7 +26,7 @@ function printValues(data){
         let dataHora = document.createElement("td");
         tableRow.appendChild(dataHora);
 
-        jogador.innerText = partida.nome;
+        jogador.innerText = partida.nome_user;
         dimensoes.innerText = (partida.dimensoes + " x " + partida.dimensoes);
         bombas.innerText = partida.numero_bombas;
         modalidade.innerText = partida.modalidade == 0 ? "Classico" : "Rivotril";

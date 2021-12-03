@@ -33,6 +33,7 @@ body {
     justify-content : center;
     background-color: saddlebrown;
     border          : solid 8px var(--sand);
+    min-height      : 20rem;
     max-height      : 25rem;
     margin-bottom   : 1%;
     overflow-x      : hidden;
@@ -95,18 +96,19 @@ section {
 
 table {
     /* padding: 1%; */
-    color          : var(--brown);
-    font-size      : var(--body);
-    width          : 80rem;
-    border         : none;
-    border-spacing : 0 9px;
-    border-collapse: separate;
-    margin-top     : -8px;
+    color             : var(--brown);
+    font-size         : var(--body);
+    width             : 80rem;
+    border            : none;
+    border-spacing    : 0 9px;
+    border-collapse   : separate;
+    /* margin-top     : -8px; */
+    column-gap        : 2em;
 }
 
 
 table tr {
-    text-align: left;
+    text-align: center;
 }
 
 table tr:nth-child(even) {
@@ -116,7 +118,7 @@ table tr:nth-child(even) {
 
 
 .titulos-tabela {
-    color    : var(--white);
-    font-size: var(--body);
-
+    color     : var(--white);
+    font-size : var(--body);
+    text-align: center;
 }
