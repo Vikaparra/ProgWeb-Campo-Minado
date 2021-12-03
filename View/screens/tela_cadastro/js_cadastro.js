@@ -1,9 +1,9 @@
-function loadData(){
-    fetch("../../../Controller/perfil.php")
-    .then(response => response.json())
-    .then(data => insertDataOnFields(data))
-    .catch(error => JSON.parse(JSON.stringify(error)))
-}
+// function loadData(){
+//     fetch("../../../Controller/perfil.php")
+//     .then(response => response.json())
+//     .then(data => insertDataOnFields(data))
+//     .catch(error => JSON.parse(JSON.stringify(error)))
+// }
 
 
 function cadastro(id){
