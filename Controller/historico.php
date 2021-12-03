@@ -16,7 +16,7 @@
             ORDER BY data_hora");
         
         $partidas = [];
-    
+            
         while($row = $statement->fetch(PDO::FETCH_ASSOC)){
             array_push($partidas, $row);
         }
