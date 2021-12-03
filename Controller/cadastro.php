@@ -1,5 +1,7 @@
 <?php
 
+    require('sessao.php');
+
     $serverName = "localhost";
     $username   = "root";
     $password   = "";
@@ -24,7 +26,8 @@
             ]);
             
             if ($resultado > 0) {
-               echo json_encode(["result" => 201]);// realizou as mudanças
+                iniciarSessao($data);
+                echo json_encode(["result" => 201]);// realizou as mudanças
             }else{
                 echo json_encode(["result" => 200]); //está ok mas não fez musdanças
             }
