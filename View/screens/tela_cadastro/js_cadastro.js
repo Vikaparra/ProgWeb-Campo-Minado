@@ -51,7 +51,7 @@ function cadastro(id){
     .then(answer => {
         if(answer["result"] > 200){
             window.alert("Usuario cadastrado com sucesso!");
-            location.href = ("../tela_menu_principal/teste_session.php");
+            location.href = ("../tela_menu_principal/tela_menu_principal.html");
         }else{
             window.alert("Um erro ocorreu. Certifique-se de que ja não está cadastrado");
         }
