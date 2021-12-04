@@ -17,12 +17,14 @@
     <title>Menu Principal</title>
 </head>
 
-<body>
+<body onload="loadData()">
     <div class="body">
         <nav class="side-menu">
             <div id="divimagem">
                 <img class="pirata-img" src="../../shared/imgs/Pirata_char/pirata_jpg.gif" alt="Personagem em pixelart de um pirata">
-                <h2 class="pirate-name">PIRATE NAME</h2>
+                <?php
+                    echo "<h2 id='pirate-name' class='pirate-name'>".$_SESSION['nome']."</h2>";
+                ?>
             </div>
             <div class="div-buttons-left">
                 <button id="perfil_menu" class="general-button ">PERFIL</button>
@@ -38,9 +40,9 @@
         <section class="side-menu">
             <h3>TOP 3</h3>
             <div>
-                <span><img src="../../shared/imgs/trofeus/ouro.png" alt="troféu de ouro">Bauducco</span>
-                <span><img src="../../shared/imgs/trofeus/prata.png" alt="troféu de prata">Vika</span>
-                <span><img src="../../shared/imgs/trofeus/bronze.png" alt="troféu de bronze">Myrelle</span>
+                <table>                    
+                </table>
+
             </div>
 
             <div class="div-buttons-right">
@@ -76,11 +78,14 @@
             location.href = ("../tela_de_ranking/Tela_de_Ranking.html");
         };
     </script>
+    <script src="./tela_menu_principal.js"></script>
     <script>
         document.getElementById("sair_menu").onclick = function() {
+            logOut();
             location.href = ("../inicial/inicial.html");
         };
     </script>
+    
 
 
 </body>

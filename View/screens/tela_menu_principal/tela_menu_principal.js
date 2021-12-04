@@ -31,3 +31,9 @@ function printValues(data){
         jogador.innerText = partida.nome_user;
     });
 }
+
+function logOut(){
+    fetch("../../../Controller/logout.php")
+    .then(response => console.log(response.status))
+    .catch(error => console.log(error));
+}

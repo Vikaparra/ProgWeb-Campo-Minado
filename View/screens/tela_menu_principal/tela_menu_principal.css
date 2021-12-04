@@ -19,7 +19,9 @@
 .side-menu {
     display       : flex;
     flex-direction: column;
+    /* min-height: 85vh; */
     max-height: 85vh;
+    max-width: 25vw;
     padding       : 2em 1.5em 0.5em 1.5em;
     background    : linear-gradient(rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)), url(../../shared/imgs/Texturas/Madeira_tabua.png.crdownload);
@@ -79,11 +81,12 @@ span {
     align-items: center;
     font-size  : 32px;
     color      : white;
+    vertical-align: middle;
 }
 
 span img {
     height      : 2em;
-    margin-right: 1em;
+    /* margin-right: 1em; */
 }
 
 .button-vermelho {
@@ -96,4 +99,5 @@ span img {
 
 table tr td{
     color: white;
+    vertical-align: middle;
 }

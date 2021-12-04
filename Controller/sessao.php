@@ -7,10 +7,16 @@
     }
 
     function verificarSessao(){
-        if(!isset($_SESSION['username'])){
-            header("Location:"."../inicial/inicial.html");
-            //forceRedirect("../View/screens/inicial/inicial.html");
-        }
+         session_start();
+         if(!isset($_SESSION['username'])){
+             header("Location:"."../inicial/inicial.html");
+             //forceRedirect("../View/screens/inicial/inicial.html");
+         }
+
+        // if(!isset($_SESSION['username'])){
+        //     header("Location:"."../inicial/inicial.html");
+        //     //forceRedirect("../View/screens/inicial/inicial.html");
+        // }
     }
 
 ?>
