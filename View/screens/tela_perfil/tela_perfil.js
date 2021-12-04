@@ -63,7 +63,7 @@ function updateData(id){
     .then(response => response.json())
     .then(answer => {
         if(answer["result"] >= 200){
-            location.href = ("../tela_menu_principal/tela_menu_principal.html");
+            location.href = ("../tela_menu_principal/tela_menu_principal.php");
         }else{
             window.alert("Um erro ocorreu. Tente novamente mais tarde");
         }

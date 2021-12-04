@@ -5,6 +5,8 @@ $username   = "root";
 $password   = "";
 
 try {
+    session_start();
+    
     $conn = new PDO("mysql:host=$serverName;dbname=progweb", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
