@@ -12,7 +12,7 @@
     <title>Menu Principal</title>
 </head>
 
-<body>
+<body onload="loadData()">
     <div class="body">
         <nav class="side-menu">
             <div id="divimagem">
@@ -33,9 +33,9 @@
         <section class="side-menu">
             <h3>TOP 3</h3>
             <div>
-                <span><img src="../../shared/imgs/trofeus/ouro.png" alt="troféu de ouro">Bauducco</span>
-                <span><img src="../../shared/imgs/trofeus/prata.png" alt="troféu de prata">Vika</span>
-                <span><img src="../../shared/imgs/trofeus/bronze.png" alt="troféu de bronze">Myrelle</span>
+                <table>                    
+                </table>
+
             </div>
 
             <div class="div-buttons-right">
@@ -76,6 +76,8 @@
             location.href = ("../inicial/inicial.html");
         };
     </script>
+    
+    <script src="./tela_menu_principal.js"></script>
 
 
 </body>
