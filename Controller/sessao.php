@@ -6,4 +6,11 @@
         $_SESSION['nome'] = $data["nome"];
     }
 
+    function verificarSessao(){
+        if(!isset($_SESSION['username'])){
+            header("Location:"."../inicial/inicial.html");
+            //forceRedirect("../View/screens/inicial/inicial.html");
+        }
+    }
+
 ?>

@@ -25,7 +25,7 @@ for (var i = 0; i < alterarConfigs.length; i++) {
 var sair = document.getElementsByClassName('botao-sair-jogo');
 for (var i = 0; i < sair.length; i++) {
     sair[i].addEventListener('click',  ()=>{
-        document.location.href = ("../tela_menu_principal/tela_menu_principal.html");
+        document.location.href = ("../tela_menu_principal/tela_menu_principal.php");
     }, false);
 }
 

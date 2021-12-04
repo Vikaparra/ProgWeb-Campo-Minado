@@ -17,18 +17,18 @@
             
             <div class="imagem"><img class="img-pirata" src="../../shared/imgs/Pirata_char/pirata_jpg.gif" alt="gif de pixelart de um pirata andando para frente e para trás"></div>
 
-            <form action="login.php" method="POST">
+            <form action="../../../Controller/login.php" method="POST">
                 <ul class="flex">
                     <li> <input type="email" id="email" name="email" placeholder="email"> </li>
                     <li> <input type="password" id="senha" name="senha" placeholder="senha"> </li>
                 </ul>
-            </form>
 
-            <div class="div-button">
-                <button id="entrar_login" name="entrar_login" class="general-button" type="submit">
-                    ENTRAR
-                </button>
-            </div>
+                <div class="div-button">
+                    <button id="entrar_login" name="entrar_login" class="general-button" type="submit">
+                        ENTRAR
+                    </button>
+                </div>
+            </form>
 
             <div class="div-button-voltar">
                 <button id="voltar_login" class="general-button general-button-menu" type="button">
@@ -40,12 +40,11 @@
 
     </div>
 
+    <!-- <script src="./login.js"></script> -->
 
-    <script>
-        document.getElementById("entrar_login").onclick = function() {
-            location.href = ("../tela_menu_principal/tela_menu_principal.html");
-        };
-    </script>
+    <!-- <script>
+        document.getElementById("entrar_login").addEventListener("click", fazerLogin);
+        </script> -->
     <script>
         document.getElementById("voltar_login").onclick = function() {
             location.href = ("../inicial/inicial.html");
