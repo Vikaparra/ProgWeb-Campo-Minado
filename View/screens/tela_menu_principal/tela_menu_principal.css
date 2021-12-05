@@ -33,10 +33,10 @@
 
 .div-buttons-left {
     margin-top     : 0.5em;
-    min-height     : 22em;
     display        : flex;
     flex-direction : column;
     justify-content: space-evenly;
+    row-gap: 2em;
 }
 
 .div-buttons-right {
