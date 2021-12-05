@@ -87,7 +87,7 @@ function gravarDados(resultado){
     data_hora.setHours(data_hora.getHours() - 3);
     var pontos_partida = calcularPontuacao();
 
-    fetch("http://localhost/SI401B/Controller/partida.php", {method: "POST", body: JSON.stringify({
+    fetch("../../../Controller/partida.php", {method: "POST", body: JSON.stringify({
         numeroBombas, 
         numeroCelulas, 
         modoJogo, 
