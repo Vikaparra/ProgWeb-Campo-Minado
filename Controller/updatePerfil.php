@@ -20,7 +20,7 @@ try {
         telefone = '".$data["telefone"]."',
         email = '".$data["email"]."',
         senha = '".$data["senha"]."'
-        WHERE id_user = ".$data["id_user"]."
+        WHERE username = '".$_SESSION["username"]."'
     ");
 
 

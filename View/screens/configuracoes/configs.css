@@ -103,3 +103,9 @@ select {
     height     : 2rem;
     align-items: center;
 }
+
+.div-button-voltar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}

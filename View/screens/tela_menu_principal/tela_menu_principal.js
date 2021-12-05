@@ -28,7 +28,7 @@ function printValues(data){
         let spantext = document.createElement("span");
         spantext.appendChild(jogador);
         tableRow.appendChild(spantext);
-        jogador.innerText = partida.nome_user;
+        jogador.innerText = partida.username;
     });
 }
 

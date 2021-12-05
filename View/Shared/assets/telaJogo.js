@@ -18,7 +18,7 @@ for (var i = 0; i < grid.length; i++) {
 var alterarConfigs = document.getElementsByClassName('botao-config');
 for (var i = 0; i < alterarConfigs.length; i++) {
     alterarConfigs[i].addEventListener('click',  ()=>{
-        document.location.href = ("../configuracoes/configs.html");
+        document.location.href = ("../configuracoes/configs.php");
     }, false);
 }
 

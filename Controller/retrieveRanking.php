@@ -8,9 +8,7 @@ try {
     $conn = new PDO("mysql:host=$serverName;dbname=progweb", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // $statement = $conn->query("SELECT * FROM partida WHERE resultado=1 ORDER BY dimensoes desc, tempo_gasto asc LIMIT 10");
-
-     $statement = $conn->query("SELECT user.nome_user, user.id_user, dimensoes, numero_bombas, modalidade, tempo_gasto, resultado, data_hora 
+     $statement = $conn->query("SELECT user.username, user.id_user, dimensoes, numero_bombas, modalidade, tempo_gasto, resultado, data_hora 
      FROM partida INNER JOIN user 
      ON (id_user = id_jogador AND resultado = 1)
      ORDER BY dimensoes desc, tempo_gasto asc");

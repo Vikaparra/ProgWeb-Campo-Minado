@@ -55,12 +55,12 @@
 
     <script>
         document.getElementById("perfil_menu").onclick = function() {
-            location.href = ("../tela_perfil/tela_perfil.html");
+            location.href = ("../tela_perfil/tela_perfil.php");
         };
     </script>
     <script>
         document.getElementById("historico_menu").onclick = function() {
-            location.href = ("../historico/Historico.html");
+            location.href = ("../historico/Historico.php");
         };
     </script>
     <script>
@@ -70,12 +70,12 @@
     </script>
     <script>
         document.getElementById("jogar_menu").onclick = function() {
-            location.href = ("../configuracoes/configs.html");
+            location.href = ("../configuracoes/configs.php");
         };
     </script>
     <script>
         document.getElementById("ranking_menu").onclick = function() {
-            location.href = ("../tela_de_ranking/Tela_de_Ranking.html");
+            location.href = ("../tela_de_ranking/Tela_de_Ranking.php");
         };
     </script>
     <script src="./tela_menu_principal.js"></script>

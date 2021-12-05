@@ -1,3 +1,8 @@
+var btnSair = document.getElementById("sair");
+btnSair.addEventListener("click", () => {
+    location.href = ("../tela_menu_principal/tela_menu_principal.php");
+});
+
 var modoDeJogo = document.querySelector("#modo_jogo");
 var qtdCelulas = document.querySelector("#gridvalue");
 var qtdBombas = document.querySelector("#bombvalue");
@@ -22,13 +27,13 @@ botaoEnviar.addEventListener("click", ()=>{
 
     
     if(valorModoDeJogo == "rivotril" && JSON.stringify(tabuleiro) != "{}"){
-        document.location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.html");
+        document.location.href = ("../tela-jogo-rivotril/tela-jogo-rivotril.php");
         let jsonTabuleiro = JSON.stringify(tabuleiro);
         sessionStorage.setItem("tabuleiro", jsonTabuleiro);
         
     }
     else if(valorModoDeJogo == "classico" && JSON.stringify(tabuleiro) != "{}"){
-        document.location.href = ("../tela-jogo-classico/tela-jogo-classico.html");
+        document.location.href = ("../tela-jogo-classico/tela-jogo-classico.php");
         let jsonTabuleiro = JSON.stringify(tabuleiro);
         sessionStorage.setItem("tabuleiro", jsonTabuleiro);
         

@@ -74,15 +74,47 @@ function celulasZero(tabuleiro, linha, coluna){
     }
 }
 
+function gravarDados(resultado){
+
+    var numeroCelulas = tabuleiro.numeroCelulas;
+    var numeroBombas = tabuleiro.numeroBombas;
+    var modoJogo = String(tabuleiro.modoJogo) == "rivotril" ? true : false;
+    var tempo = tabuleiro.modoJogo == "classico" ? 
+    tabuleiro.tempo : 
+    tempoOriginal - tabuleiro.tempo;
+    var resultadoPartida = resultado;
+    var data_hora = new Date();
+    data_hora.setHours(data_hora.getHours() - 3);
+    var pontos_partida = calcularPontuacao();
+
+    fetch("http://localhost/SI401B/Controller/partida.php", {method: "POST", body: JSON.stringify({
+        numeroBombas, 
+        numeroCelulas, 
+        modoJogo, 
+        resultadoPartida, 
+        data_hora, 
+        pontos_partida,
+        tempo
+    })})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+
+}
+
 function fimDeJogo(resultado){ //parâmetro de vitória ou derrota p/ definir display
     if(resultado=="D"){
         fimDeJogoGUIEvent(0);
+        gravarDados(false);
         //display DIV de derrota
     }
     else {
         fimDeJogoGUIEvent(1);
+        gravarDados(true);
         //display DIV de vitória
     }
+
+
 }
 
 function idStringfy(linha, coluna){
@@ -180,7 +212,7 @@ function fimDeJogoGUIEvent(resultado){
     overlayTela.appendChild(textoFimDeJogo);
 
     var pontuacao = document.createElement("h3");
-    pontuacao.innerText = ("PONTUACAO: " + calcularPontuacao());
+    pontuacao.innerText = ("PONTUACAO: " + parseInt(calcularPontuacao()));
     overlayTela.appendChild(pontuacao);
 
     var divButtons = document.createElement("div");
@@ -197,12 +229,12 @@ function fimDeJogoGUIEvent(resultado){
     });
     divButtons.appendChild(jogarNovementeBtn);
 
-    var sairBtn = document.createElement("button");
-    sairBtn.innerHTML = "SAIR";
-    sairBtn.style = "color: var(--velvet)";
-    sairBtn.className = "general-button";
-    sairBtn.addEventListener("click", ()=> document.location.href = "../../screens/configuracoes/configs.html");
-    divButtons.appendChild(sairBtn);
+    // var sairBtn = document.createElement("button");
+    // sairBtn.innerHTML = "SAIR";
+    // sairBtn.style = "color: var(--velvet)";
+    // sairBtn.className = "general-button";
+    // sairBtn.addEventListener("click", ()=> document.location.href = "../../screens/configuracoes/configs.php");
+    // divButtons.appendChild(sairBtn);
 
     clearTimeout(interval);
 

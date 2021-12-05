@@ -9,7 +9,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $statement = $conn->query(
-    "SELECT user.nome_user, user.id_user, tempo_gasto, resultado, dimensoes 
+    "SELECT user.username, user.id_user, tempo_gasto, resultado, dimensoes 
      FROM partida INNER JOIN user 
      ON (id_user = id_jogador AND resultado = 1)
      ORDER BY dimensoes desc, tempo_gasto asc");

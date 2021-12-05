@@ -26,7 +26,7 @@ function printValues(data){
         let dataHora = document.createElement("td");
         tableRow.appendChild(dataHora);
 
-        jogador.innerText = partida.nome_user;
+        jogador.innerText = partida.username;
         dimensoes.innerText = (partida.dimensoes + " x " + partida.dimensoes);
         bombas.innerText = partida.numero_bombas;
         modalidade.innerText = partida.modalidade == 0 ? "Classico" : "Rivotril";

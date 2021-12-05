@@ -52,7 +52,6 @@ function updateData(id){
     fetch("../../../Controller/updatePerfil.php", {
         method: "POST",
         body: JSON.stringify({
-            "id_user" : 1,
             "nome_user" : name.value,
             "data_nascimento" : dataNasc.value,
             "telefone" : telefone.value,
@@ -65,7 +64,7 @@ function updateData(id){
         if(answer["result"] >= 200){
             location.href = ("../tela_menu_principal/tela_menu_principal.php");
         }else{
-            window.alert("Um erro ocorreu. Tente novamente mais tarde");
+            console.log("Ocorreu um erro. Tente novamente mais tarde");
         }
     })
     .catch(error => console.log(error));

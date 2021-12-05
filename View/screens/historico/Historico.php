@@ -1,3 +1,8 @@
+<?php 
+    require("../../../Controller/sessao.php");
+    verificarSessao();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../shared/assets/button.css">
     <link rel="stylesheet" href="../../shared/assets/normalize.css">
-    <link rel="stylesheet" href="./Rankingcss.css">
+    <link rel="stylesheet" href="./historico.css">
     <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
     <title>Histórico</title>
 </head>
@@ -15,11 +20,7 @@
 <body onload="loadData()">
     <div class="container">
 
-        <div class="div-img">
-            <img id="trofeus" src="../../shared/imgs/trofeus/conjunto-de-trofeus-com-estilo-pixel-art_475147-84-removebg-preview.png" alt="Imagem de 3 troféus, um de ouro, um de prata e um de bronze.">
-        </div>
-
-        <h2 class="titulo">RANKING</h2>
+        <h2 id="titulo">HISTORICO</h2>
         <div class="box">
 
             <table>
@@ -29,14 +30,15 @@
                     <th>BOMBAS </th>
                     <th>MODALIDADE </th>
                     <th>TEMPO</th>
-                    <th>RESULT </th>
+                    <th>RESULTADO </th>
                     <th>DATA/HORA </th>
                 </tr>
+
             </table>
         </div>
 
         <div class="botoes">
-            <button id="voltar_ranking" class="general-button" type="button">
+            <button id="voltar_historico" class="general-button" type="button">
                     VOLTAR
             </button>
         </div>
@@ -44,12 +46,11 @@
 
 
     <script>
-        document.getElementById("voltar_ranking").onclick = function() {
+        document.getElementById("voltar_historico").onclick = function() {
             location.href = ("../tela_menu_principal/tela_menu_principal.php");
         };
     </script>
-
-    <script src="./tela_de_ranking.js"></script>
+    <script src="puxandohistorico.js"></script>
 
 </body>
 
