@@ -11,6 +11,8 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $data = json_decode(file_get_contents('php://input'), true);
+     
+    $_SESSION['nome'] = $data['nome_user'];
 
     $result = $conn->exec("
         UPDATE user 
