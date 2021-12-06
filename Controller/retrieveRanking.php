@@ -28,7 +28,7 @@ try {
             array_push($nomesAvaliados, $partidas[$i]["id_user"]);
         }
 
-        if(count($nomesAvaliados) > 10){
+        if(count($nomesAvaliados) == 10){
             break;
         }
     }
