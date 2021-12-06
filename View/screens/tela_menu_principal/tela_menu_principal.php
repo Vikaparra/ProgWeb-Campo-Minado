@@ -65,7 +65,7 @@
     </script>
     <script>
         document.getElementById("creditos_menu").onclick = function() {
-            location.href = ("../creditos/Tela_de_Creditos.html");
+            location.href = ("../creditos/Tela_de_Creditos.php");
         };
     </script>
     <script>
