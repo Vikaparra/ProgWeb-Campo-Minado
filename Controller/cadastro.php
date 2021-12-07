@@ -13,9 +13,9 @@
 
         if (isset($data["username"])){
 
-            $sql = "INSERT INTO user (username, nome_user, cpf, email, data_nascimento, telefone, senha) VALUES (?,?,?,?,?,?,?)"; //criação e execução da query
-            $execucao = $conn->prepare($sql);
-            $resultado = $execucao->execute([
+            $sql = "INSERT INTO user (username, nome_user, cpf, email, data_nascimento, telefone, senha) VALUES (?,?,?,?,?,?,?)"; //criação da query
+            $execucao = $conn->prepare($sql); // Prepara para execução      
+            $resultado = $execucao->execute([ // Executa as instruções
                 $data["username"], 
                 $data["nome"], 
                 $data["cpf"], 
@@ -27,9 +27,9 @@
             
             if ($resultado > 0) {
                 iniciarSessao($data);
-                echo json_encode(["result" => 201]);// realizou as mudanças
+                echo json_encode(["result" => 201]);// cadastrou normalmente
             }else{
-                echo json_encode(["result" => 200]); //está ok mas não fez musdanças
+                echo json_encode(["result" => 200]); // não cadastrou
             }
 
         }

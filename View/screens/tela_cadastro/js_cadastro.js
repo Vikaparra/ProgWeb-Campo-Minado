@@ -1,18 +1,10 @@
-// function loadData(){
-//     fetch("../../../Controller/perfil.php")
-//     .then(response => response.json())
-//     .then(data => insertDataOnFields(data))
-//     .catch(error => JSON.parse(JSON.stringify(error)))
-// }
-
-
 function cadastro(id){
 
-    var name = document.getElementById("campo_nome");
+    var name = document.getElementById("campo_nome"); //Recebendo as informações que o usuario colocou no HTML
     var dataNasc = document.getElementById("campo_datanasc");
     var cpf = document.getElementById("campo_cpf");
     var telefone = document.getElementById("campo_telefone");
-    if(!((/[0-9]{2}9[0-9]{8}/).test(String(telefone.value))) || telefone.value.length > 11){
+    if(!((/[0-9]{2}9[0-9]{8}/).test(String(telefone.value))) || telefone.value.length > 11){ // Verificando se os dados são válidos
         window.alert("Insira um número de telefone válido");
         return ;
     }
@@ -34,8 +26,7 @@ function cadastro(id){
         return ;
     }
 
-
-    fetch("../../../Controller/cadastro.php", {
+    fetch("../../../Controller/cadastro.php", { // Iniciando o cadastro (cadastro.php vai receber as infos e processar)
         method: "POST",
         body: JSON.stringify({
             "nome" : name.value,
@@ -47,7 +38,7 @@ function cadastro(id){
             "senha" : password.value
         })
     })
-    .then(response => response.json())
+    .then(response => response.json()) // Recebendo resposta do cadastro.php
     .then(answer => {
         if(answer["result"] > 200){
             window.alert("Usuario cadastrado com sucesso!");

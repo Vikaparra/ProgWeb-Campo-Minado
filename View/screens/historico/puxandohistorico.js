@@ -1,14 +1,14 @@
 function loadData(){
     fetch("../../../Controller/historico.php")
-    .then(response => response.json())
-    .then(data => printValues(data))
+    .then(response => response.json()) // Recebendo o array com as partidas
+    .then(data => printValues(data)) // Passando o array como parametro para a função Print 
     .catch(error => console.log(error))
 }
 
 function printValues(data){
-    var table = document.querySelector("table");
+    var table = document.querySelector("table"); // Selecionando a tabela para inserir os dados de partidas
     
-    data.forEach(partida => {
+    data.forEach(partida => { // Inserindo elementos da tabela
         let tableRow = document.createElement("tr");
         table.appendChild(tableRow);
         let jogador = document.createElement("td");
@@ -26,7 +26,7 @@ function printValues(data){
         let dataHora = document.createElement("td");
         tableRow.appendChild(dataHora);
 
-        jogador.innerText = partida.username;
+        jogador.innerText = partida.username; // Inserindo as informações nos elementos
         dimensoes.innerText = (partida.dimensoes + " x " + partida.dimensoes);
         bombas.innerText = partida.numero_bombas;
         modalidade.innerText = partida.modalidade == 0 ? "Classico" : "Rivotril";
