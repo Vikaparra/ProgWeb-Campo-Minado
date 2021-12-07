@@ -17,8 +17,8 @@ try {
 
     // $id_partida = $_POST['id_partida'];
     // $id_jogador = $_POST['campo_nome'];
-    $dimensoes = $data['numeroBombas'];
-    $numero_bombas = $data['numeroCelulas'];
+    $dimensoes = $data['numeroCelulas'];
+    $numero_bombas = $data['numeroBombas'];
     $modalidade = $data['modoJogo'];
     $tempo_gasto = $data['tempo'];
     $resultado = $data['resultadoPartida'];
