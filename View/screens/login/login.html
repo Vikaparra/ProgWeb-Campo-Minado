@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/assets/normalize.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            
+            <div class="imagem"><img class="img-pirata" src="../../shared/imgs/Pirata_char/pirata_jpg.gif" alt="gif de pixelart de um pirata andando para frente e para trás"></div>
+
+            <form action="../../../Controller/login.php" method="POST">
+                <ul class="flex">
+                    <li> <input type="email" id="email" name="email" placeholder="email"> </li>
+                    <li> <input type="password" id="senha" name="senha" placeholder="senha"> </li>
+                </ul>
+
+                <div class="div-button">
+                    <button id="entrar_login" name="entrar_login" class="general-button" type="submit">
+                        ENTRAR
+                    </button>
+                </div>
+            </form>
+
+            <div class="div-button-voltar">
+                <button id="voltar_login" class="general-button general-button-menu" type="button">
+                    x
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <script src="./login.js"></script> -->
+
+    <!-- <script>
+        document.getElementById("entrar_login").addEventListener("click", fazerLogin);
+        </script> -->
+    <script>
+        document.getElementById("voltar_login").onclick = function() {
+            location.href = ("../inicial/inicial.html");
+        };
+    </script>
+
+</body>
+
+</html>

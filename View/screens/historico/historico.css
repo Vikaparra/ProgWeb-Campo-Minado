@@ -1,0 +1,125 @@
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/normalize.css);
+
+
+body {
+    display                : flex;
+    justify-content        : space-between;
+    align-items            : center;
+    background-image       : url(../../shared/imgs/BG/principal_sem_logo.png);
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    background-repeat      : no-repeat;
+}
+
+.container {
+    width          : 100vw;
+    height         : 100vh;
+    /* padding     : 0.5rem 0; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+.box {
+    max-width       : 90rem;
+    min-width       : 80rem;
+    padding         : 1.5rem;
+    display         : flex;
+    box-sizing      : border-box;
+    position        : relative;
+    justify-content : center;
+    background-color: saddlebrown;
+    border          : solid 8px var(--sand);
+    min-height      : 20rem;
+    max-height      : 25rem;
+    margin-bottom   : 1%;
+    overflow-x      : hidden;
+}
+
+#titulo {
+    font-size: var(--header2);
+}
+
+.botoes {
+    width          : 100vw;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.general-button {
+    margin    : 0 4rem 0 4rem;
+    min-height: 5rem;
+}
+
+h1 {
+    margin-top   : 1%;
+    margin-bottom: 1%;
+    font-size    : var(--header2);
+    text-shadow  : 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.div-footer {
+    display        : flex;
+    justify-content: space-between;
+    padding-left   : 15px;
+    padding-right  : 15px;
+}
+
+header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+}
+
+section {
+    display        : flex;
+    justify-content: center;
+    margin-top     : 1%;
+    margin-bottom  : 1%;
+}
+
+.background-ranking {
+    background-color: saddlebrown;
+    border          : solid 8px var(--sand);
+    max-height      : 25rem;
+    width           : 80rem;
+    margin-bottom   : 1%;
+    overflow-x      : hidden;
+    padding         : 10px;
+    display         : flex;
+    justify-content : center;
+}
+
+table {
+    /* padding: 1%; */
+    color             : var(--brown);
+    font-size         : var(--body);
+    width             : 80rem;
+    border            : none;
+    border-spacing    : 0 9px;
+    border-collapse   : separate;
+    /* margin-top     : -8px; */
+    column-gap        : 2em;
+}
+
+
+table tr {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #cc983d9a;
+
+}
+
+
+.titulos-tabela {
+    color     : var(--white);
+    font-size : var(--body);
+    text-align: center;
+}

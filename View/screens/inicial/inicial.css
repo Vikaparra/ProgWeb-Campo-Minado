@@ -1,0 +1,22 @@
+@import url(../../shared/assets/shared.css);
+@import url(../../shared/assets/button.css);
+
+body {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    background-image: url(../../shared/imgs/BG/principal_logo.png);
+    background-size : cover;
+}
+
+.div-buttons {
+    margin-top    : 24rem;
+    align-items   : center;
+    display       : flex;
+    flex-direction: column;
+}
+
+.general-button {
+    padding: 1.8rem 15px;
+    margin : 0.4rem;
+}

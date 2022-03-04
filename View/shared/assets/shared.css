@@ -1,0 +1,21 @@
+:root {
+    --white : #FAF5F1;
+    --brown : #2D170E;
+    --sand  : #CC983D;
+    --velvet: #A30000;
+    --blue  : #29BAEC;
+
+    --header1: 63px;
+    --header2: 47px;
+    --body   : 17px;
+    --forms  : 12px;
+}
+
+.container {
+    width          : 100vw;
+    height         : 100vh;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    align-items    : center;
+}

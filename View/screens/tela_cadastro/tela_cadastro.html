@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Shared/assets/normalize.css">
+    <link rel="stylesheet" href="../../Shared/assets/button.css">
+    <link rel="shortcut icon" href="../../Shared/imgs/Bomba/bomba.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="tela_cadastro.css">
+    <title>Cadastre-se!</title>
+</head>
+
+<body class="background">
+    <div class="container">
+        <h2 class="titulo">CADASTRE-SE</h2>
+
+        <div class="box wrap">
+            <form>
+
+                <label for="campo_nome">NOME COMPLETO:</label>
+                <input type="text" id="campo_nome" placeholder="Insira seu nome completo">
+
+                <div class="displayflex row">
+                    <div class="displayflex column">
+                        <label for="campo_datanasc">DATA DE NASCIMENTO:</label>
+                        <input type="date" id="campo_datanasc">
+                    </div>
+                    <div class="displayflex column">
+                        <label for="campo_cpf">CPF:</label>
+                        <input type="number" id="campo_cpf" placeholder="Insira seu CPF">
+                    </div>
+                </div>
+
+                <label for="campo_telefone">TELEFONE COM DDD:</label>
+                <input type="number" id="campo_telefone" placeholder="(x x) x x x x x - x x x x">
+
+                <label for="campo_email">E-MAIL:</label>
+                <input type="email" id="campo_email" placeholder="Insira seu e-mail">
+
+                <label for="campo_username">USERNAME:</label>
+                <input type="text" id="campo_username" placeholder="Insira seu username">
+
+                <label for="campo_senha">SENHA:</label>
+                <input type="password" id="campo_senha" placeholder="Insira sua senha">
+
+                <label for="campo_confsenha">CONFIRME A SENHA:</label>
+                <input type="password" id="campo_confsenha" placeholder="Insira sua senha novamente">
+
+            </form>
+        </div>
+
+        <div class="botoes">
+            <button id="voltar_cadastro" class="general-button" type="button">
+                    VOLTAR
+                </button>
+            <button id="continuar_cadastro" class="general-button" type="submit">
+                    CONTINUAR
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="js_cadastro.js"></script>
+
+</body>
+
+</html>

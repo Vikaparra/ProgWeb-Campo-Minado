@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/assets/normalize.css">
+    <link rel="stylesheet" href="../../shared/assets/button.css">
+    <link rel="stylesheet" href="inicial.css">
+    <link rel="shortcut icon" href="../../shared/imgs/Bomba/bomba.png" type="image/x-icon">
+    <!-- <script src="../../Model/Tabuleiro.js"></script>
+    <script src="../../Controller/jogo.js"></script> -->
+    <title>Início</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div-buttons">
+            <div>
+                <button id="login_inicial" class="general-button" type="submit">
+                    ENTRAR
+                </button>
+            </div>
+            <div>
+                <button id="cadastro_inicial" class="general-button" type="submit">
+                    CADASTRE-SE
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login_inicial").onclick = function() {
+            location.href = ("../login/login.html");
+        };
+    </script>
+    <script>
+        document.getElementById("cadastro_inicial").onclick = function() {
+            location.href = ("../tela_cadastro/tela_cadastro.html");
+        };
+    </script>
+
+</body>
+
+</html>
